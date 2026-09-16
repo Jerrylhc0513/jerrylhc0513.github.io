@@ -1,35 +1,49 @@
 ---
 title: "Haochen (Jerry) Li"
-description: "M.S. student in Statistical Science at Duke University researching time series, machine learning, attention mechanisms, and quantitative finance."
+description: "M.S. student in Statistical Science at Duke University, interested in deep learning and time-series forecasting."
+image: images/profile.jpg
+
+about:
+  template: trestles
+  image-shape: round
+  image-width: 12em
+  links:
+    - icon: envelope
+      text: Email
+      href: mailto:h.li@duke.edu
+    - icon: github
+      text: GitHub
+      href: https://github.com/jerrylhc0513
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/haochen-li-690ba3300
 ---
 
-## About Me
+I am an M.S. student in Statistical Science at Duke University. Before
+joining Duke, I studied Computational Finance and Mathematics with Economics
+at University College London.
 
-I am an M.S. student in Statistical Science at Duke University.
+My research interests lie in the theory and applications of deep learning,
+with a particular focus on time-series forecasting.
 
-Previously, I studied Computational Finance and Mathematics with Economics
-at University College London (UCL).
+## Selected Research
 
-My research lies at the intersection of statistical learning, time-series
-forecasting, deep learning, and quantitative finance. I am particularly
-interested in understanding when and why attention-based models outperform
-classical linear predictors in nonlinear time series.
+### [Research on Lightweight Detection Algorithms for Unsafe Passenger Behavior on Escalators](https://ieeexplore.ieee.org/abstract/document/11504053/)
 
-## Research Interests
+Nan Zhang, Ying Hou, Qilun Li, **Haochen Li**, Wei Zhang, and Chaoyang Sun.
 
-- Statistical and machine learning theory
-- Time-series forecasting
-- Transformers and attention mechanisms
-- Quantitative finance
-- Intraday volume and volatility modelling
+*2026 9th International Conference on Advanced Electronic Technology,
+Computers and Software Engineering*, 2026.
 
-## Current Research
+[View on IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/11504053/)
 
-I am currently studying the statistical conditions under which softmax
-attention can outperform linear prediction in nonlinear time-series models.
+### [Integrating Convexity and DeepLabv3+ for Semantic Segmentation of Power Lines](https://doi.org/10.21203/rs.3.rs-8607246/v1)
 
-I am also extending probabilistic intraday volume forecasting methods across
-U.S. equities and foreign-exchange markets.
+Ying Hou, Jindou Tuo, **Haochen Li**, Zhuoxin Yan, Xuemei Huang, and Yuqi Wang.
+
+*Research Square Preprint*, 2026.
+
+[View Preprint](https://doi.org/10.21203/rs.3.rs-8607246/v1)
 
 ## Education
 
@@ -37,7 +51,9 @@ U.S. equities and foreign-exchange markets.
 M.S. in Statistical Science
 
 **University College London**  
-MSc Computational Finance
+M.Sc. Computational Finance
 
 **University College London**  
-BSc Mathematics with Economics, First Class Honours
+B.Sc. Mathematics with Economics, First Class Honours
+
+[View all research](research.qmd)
