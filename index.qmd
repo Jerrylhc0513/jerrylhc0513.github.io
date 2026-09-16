@@ -1,0 +1,43 @@
+---
+title: "Haochen (Jerry) Li"
+description: "M.S. student in Statistical Science at Duke University researching time series, machine learning, attention mechanisms, and quantitative finance."
+---
+
+## About Me
+
+I am an M.S. student in Statistical Science at Duke University.
+
+Previously, I studied Computational Finance and Mathematics with Economics
+at University College London (UCL).
+
+My research lies at the intersection of statistical learning, time-series
+forecasting, deep learning, and quantitative finance. I am particularly
+interested in understanding when and why attention-based models outperform
+classical linear predictors in nonlinear time series.
+
+## Research Interests
+
+- Statistical and machine learning theory
+- Time-series forecasting
+- Transformers and attention mechanisms
+- Quantitative finance
+- Intraday volume and volatility modelling
+
+## Current Research
+
+I am currently studying the statistical conditions under which softmax
+attention can outperform linear prediction in nonlinear time-series models.
+
+I am also extending probabilistic intraday volume forecasting methods across
+U.S. equities and foreign-exchange markets.
+
+## Education
+
+**Duke University**  
+M.S. in Statistical Science
+
+**University College London**  
+MSc Computational Finance
+
+**University College London**  
+BSc Mathematics with Economics, First Class Honours

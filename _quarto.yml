@@ -1,0 +1,35 @@
+project:
+  type: website
+
+website:
+  title: "Haochen (Jerry) Li"
+  site-url: "https://jerrylhc0513.github.io"
+  description: "Haochen (Jerry) Li — M.S. student in Statistical Science at Duke University, working on time series, machine learning, and quantitative finance."
+
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: research.qmd
+        text: Research
+      - href: projects.qmd
+        text: Projects
+
+    right:
+      - icon: github
+        href: https://github.com/jerrylhc0513
+      - icon: linkedin
+        href: https://www.linkedin.com/in/haochen-li-690ba3300
+      - icon: envelope
+        href: mailto:h.li@duke.edu
+
+  open-graph: true
+  search: false
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    css: styles.css
+    toc: true

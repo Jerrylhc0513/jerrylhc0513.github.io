@@ -1,0 +1,116 @@
+---
+title: "Research"
+description: "Publications and ongoing research by Haochen (Jerry) Li in deep learning, time-series forecasting, attention mechanisms, and quantitative finance."
+---
+
+My research interests lie at the intersection of statistical learning,
+deep learning, time-series forecasting, and quantitative finance.
+
+My earlier work focused on computer vision and lightweight deep-learning
+models. My current research studies attention mechanisms in nonlinear time
+series and probabilistic forecasting for financial markets.
+
+## Publications
+
+### Research on Lightweight Detection Algorithms for Unsafe Passenger Behavior on Escalators
+
+Nan Zhang, Ying Hou, Qilun Li, **Haochen Li**, Wei Zhang, and Chaoyang Sun.
+
+*2026 9th International Conference on Advanced Electronic Technology,
+Computers and Software Engineering*, 2026.
+
+This work studies lightweight deep-learning algorithms for detecting unsafe
+passenger behaviour in escalator environments. It focuses on balancing
+detection accuracy, computational efficiency, and deployment feasibility in
+resource-constrained settings.
+
+[IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/11504053/)
+
+## Preprints
+
+### Integrating Convexity and DeepLabv3+ for Semantic Segmentation of Power Lines
+
+Ying Hou, Jindou Tuo, **Haochen Li**, Zhuoxin Yan, Xuemei Huang, and Yuqi Wang.
+
+*Research Square Preprint*, 2026.
+
+This paper proposes PLE-DeepLabv3+, a lightweight semantic-segmentation model
+for detecting thin and low-contrast power lines in complex aerial imagery.
+The model combines a reconfigured ConvNeXtV2 backbone, direction-selective
+coordinate attention, efficient multi-scale feature fusion, adaptive edge
+detection, and a class-aware focal loss.
+
+[Preprint](https://doi.org/10.21203/rs.3.rs-8607246/v1) |
+[DOI](https://doi.org/10.21203/rs.3.rs-8607246/v1)
+
+## Manuscripts in Preparation
+
+### When Does Softmax Attention Outperform Linear Prediction in Nonlinear Time Series?
+
+**Haochen Li**
+
+*Manuscript in preparation.*
+
+This project studies the statistical conditions under which nonlinear
+softmax attention can outperform classical linear prediction in nonlinear
+autoregressive time series.
+
+The central mechanism is a trade-off between the approximation advantage of
+attention and its additional statistical estimation and search complexity.
+The analysis develops signal-complexity thresholds characterizing when the
+benefits of nonlinear attention become large enough to justify its greater
+complexity.
+
+The project also investigates approximate representability, projection gain,
+multi-head attention, temporal dependence, and the empirical transition
+between linear and attention-based prediction.
+
+### Replication and Cross-Asset Extension of the Intraday Volume Estimator
+
+**Haochen Li**
+
+*Manuscript based on my UCL MSc dissertation, currently being prepared for
+submission.*
+
+This project replicates and extends a Transformer-based probabilistic
+intraday volume estimator. The original framework is evaluated on U.S.
+equities and subsequently extended to G10 foreign-exchange markets.
+
+The model produces probabilistic forecasts through a Student-t predictive
+distribution and incorporates asset embeddings, intraday temporal features,
+and multi-step training. The study also investigates extensions from trading
+volume to intraday volatility and market activity.
+
+A central part of the project examines whether improvements in statistical
+forecasting accuracy translate into economically meaningful execution
+benefits. The empirical analysis compares ex-post and fully causal scheduling
+procedures and evaluates their performance against historical intraday
+volume curves.
+
+A revised manuscript based on the dissertation is currently being developed
+for submission.
+
+## Current Research Directions
+
+My current work focuses on the following questions:
+
+- When does softmax attention outperform linear prediction in nonlinear time
+  series?
+- Which nonlinear structures and signal regimes justify the additional
+  complexity of attention?
+- How do multi-head attention and temporal encoding affect statistical
+  efficiency?
+- When do Transformer models outperform linear, tree-based, and recurrent
+  baselines in financial forecasting?
+- Can improvements in probabilistic volume and volatility forecasts produce
+  economically meaningful gains in trading and execution?
+
+## Research Areas
+
+- Statistical learning theory
+- Nonlinear time-series prediction
+- Transformers and attention mechanisms
+- Probabilistic forecasting
+- Intraday volume and volatility
+- Quantitative finance
+- Computer vision and semantic segmentation

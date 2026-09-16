@@ -1,0 +1,27 @@
+---
+title: "Projects"
+description: "Research and data science projects by Haochen (Jerry) Li."
+---
+
+## Intraday Volume Estimator
+
+Replication and cross-asset extension of a probabilistic Transformer model
+for intraday volume forecasting.
+
+**Markets:** U.S. equities and G10 foreign exchange  
+**Methods:** Transformer, Student-t likelihood, multi-step training  
+**Tools:** Python, PyTorch, LSEG data
+
+## Nonlinear Time Series and Attention
+
+Theoretical and empirical investigation of the conditions under which
+softmax attention can outperform linear prediction in nonlinear
+autoregressive models.
+
+**Topics:** approximation error, estimation complexity, attention search
+cost, statistical crossover thresholds
+
+## Statistical Computing
+
+Projects in statistical modelling, data analysis, SQL, Python, R, and
+reproducible scientific publishing with Quarto.
