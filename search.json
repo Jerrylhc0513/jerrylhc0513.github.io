@@ -46,35 +46,21 @@
     "href": "index.html",
     "title": "Haochen (Jerry) Li",
     "section": "",
-    "text": "I am an M.S. student in Statistical Science at Duke University.\nPreviously, I studied Computational Finance and Mathematics with Economics at University College London (UCL).\nMy research lies at the intersection of statistical learning, time-series forecasting, deep learning, and quantitative finance. I am particularly interested in understanding when and why attention-based models outperform classical linear predictors in nonlinear time series."
+    "text": "I am an M.S. student in Statistical Science at Duke University. Before joining Duke, I studied Computational Finance and Mathematics with Economics at University College London.\nMy research interests lie in the theory and applications of deep learning, with a particular focus on time-series forecasting."
   },
   {
-    "objectID": "index.html#about-me",
-    "href": "index.html#about-me",
+    "objectID": "index.html#selected-research",
+    "href": "index.html#selected-research",
     "title": "Haochen (Jerry) Li",
-    "section": "",
-    "text": "I am an M.S. student in Statistical Science at Duke University.\nPreviously, I studied Computational Finance and Mathematics with Economics at University College London (UCL).\nMy research lies at the intersection of statistical learning, time-series forecasting, deep learning, and quantitative finance. I am particularly interested in understanding when and why attention-based models outperform classical linear predictors in nonlinear time series."
-  },
-  {
-    "objectID": "index.html#research-interests",
-    "href": "index.html#research-interests",
-    "title": "Haochen (Jerry) Li",
-    "section": "Research Interests",
-    "text": "Research Interests\n\nStatistical and machine learning theory\nTime-series forecasting\nTransformers and attention mechanisms\nQuantitative finance\nIntraday volume and volatility modelling"
-  },
-  {
-    "objectID": "index.html#current-research",
-    "href": "index.html#current-research",
-    "title": "Haochen (Jerry) Li",
-    "section": "Current Research",
-    "text": "Current Research\nI am currently studying the statistical conditions under which softmax attention can outperform linear prediction in nonlinear time-series models.\nI am also extending probabilistic intraday volume forecasting methods across U.S. equities and foreign-exchange markets."
+    "section": "Selected Research",
+    "text": "Selected Research\n\nResearch on Lightweight Detection Algorithms for Unsafe Passenger Behavior on Escalators\nNan Zhang, Ying Hou, Qilun Li, Haochen Li, Wei Zhang, and Chaoyang Sun.\n2026 9th International Conference on Advanced Electronic Technology, Computers and Software Engineering, 2026.\nView on IEEE Xplore\n\n\nIntegrating Convexity and DeepLabv3+ for Semantic Segmentation of Power Lines\nYing Hou, Jindou Tuo, Haochen Li, Zhuoxin Yan, Xuemei Huang, and Yuqi Wang.\nResearch Square Preprint, 2026.\nView Preprint"
   },
   {
     "objectID": "index.html#education",
     "href": "index.html#education",
     "title": "Haochen (Jerry) Li",
     "section": "Education",
-    "text": "Education\nDuke University\nM.S. in Statistical Science\nUniversity College London\nMSc Computational Finance\nUniversity College London\nBSc Mathematics with Economics, First Class Honours"
+    "text": "Education\nDuke University\nM.S. in Statistical Science\nUniversity College London\nM.Sc. Computational Finance\nUniversity College London\nB.Sc. Mathematics with Economics, First Class Honours\nView all research"
   },
   {
     "objectID": "about.html",
