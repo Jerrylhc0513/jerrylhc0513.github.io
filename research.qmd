@@ -1,16 +1,100 @@
 ---
 title: "Research"
-description: "Publications and ongoing research by Haochen (Jerry) Li in deep learning, time-series forecasting, attention mechanisms, and quantitative finance."
+description: "Publications and ongoing research by Haochen (Jerry) Li in deep learning, time-series forecasting, attention mechanisms, flow matching, and generative models."
+toc: true
+toc-depth: 3
+page-layout: full
 ---
 
-My research interests lie at the intersection of statistical learning,
-deep learning, time-series forecasting, and quantitative finance.
+<style>
+/* ===================================================================
+   Measured 1:1 from the reference publications page:
+   year heading 18.4px/700 · paper title 16.8px/400 ·
+   authors, venue, abstract, links all 12.8px/19.84px
+   =================================================================== */
 
-My earlier work focused on computer vision and lightweight deep-learning
-models. My current research studies attention mechanisms in nonlinear time
-series and probabilistic forecasting for financial markets.
+body.quarto-light { background: #f8f9fa; }
 
-## Publications
+/* ===== shared page container — identical on index / research / projects /
+   hobbies, so every page has the same left edge and the same width.
+   1110px centred = the content width of index.qmd's 1140px container. ===== */
+
+#quarto-content main.content {
+  box-sizing: border-box;
+  grid-column: 1 / -1 !important;
+  width: 100%;
+  max-width: 1210px;
+  margin: 24px auto 48px !important;
+  padding: 24px !important;
+}
+
+#quarto-content main.content {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075);
+}
+
+
+#quarto-document-content { font-size: 16px; line-height: 25.6px; }
+
+.quarto-title h1.title { font-size: 24px; font-weight: 700; line-height: 30px; }
+.quarto-title .subtitle { font-size: 16px; line-height: 24.8px; color: #6c757d; }
+
+/* ---- year heading ---- */
+#quarto-document-content h2 {
+  margin: 26px 0 4px;
+  padding: 0;
+  border: 0;
+  font-size: 18.4px;
+  font-weight: 700;
+  line-height: 22.08px;
+}
+
+#quarto-document-content section.level2:first-of-type > h2 { margin-top: 14px; }
+
+/* ---- one entry ---- */
+#quarto-document-content section.level3 {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #e9ecef;
+}
+
+#quarto-document-content section.level2 > section.level3:first-of-type {
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+#quarto-document-content h3 {
+  margin: 0 0 4px;
+  font-size: 16.8px;
+  font-weight: 400;
+  line-height: 23.52px;
+  color: #000;
+}
+
+/* everything inside an entry is 12.8px */
+#quarto-document-content section.level3 p {
+  margin: 0 0 3px;
+  color: #6c757d;
+  font-size: 12.8px;
+  line-height: 19.84px;
+}
+
+/* author line stays dark */
+#quarto-document-content section.level3 p:first-of-type { color: #212529; }
+
+/* venue / status lines stay dark and italic */
+#quarto-document-content section.level3 p:has(> em) { color: #212529; }
+
+/* intro paragraph above the years */
+#quarto-document-content > p,
+#quarto-document-content > section.level1 > p { font-size: 16px; line-height: 25.6px; }
+</style>
+
+My research interests lie in the theoretical foundations and practical
+applications of machine learning and deep learning.
+
+## 2026
 
 ### Research on Lightweight Detection Algorithms for Unsafe Passenger Behavior on Escalators
 
@@ -25,8 +109,6 @@ detection accuracy, computational efficiency, and deployment feasibility in
 resource-constrained settings.
 
 [IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/11504053/)
-
-## Preprints
 
 ### Integrating Convexity and DeepLabv3+ for Semantic Segmentation of Power Lines
 
@@ -43,74 +125,46 @@ detection, and a class-aware focal loss.
 [Preprint](https://doi.org/10.21203/rs.3.rs-8607246/v1) |
 [DOI](https://doi.org/10.21203/rs.3.rs-8607246/v1)
 
-## Manuscripts in Preparation
-
 ### When Does Softmax Attention Outperform Linear Prediction in Nonlinear Time Series?
 
-**Haochen Li**
+**Haochen Li**, Anru Zhang.
 
-*Manuscript in preparation.*
+*Manuscript in preparation for submission.*
 
-This project studies the statistical conditions under which nonlinear
-softmax attention can outperform classical linear prediction in nonlinear
-autoregressive time series.
-
-The central mechanism is a trade-off between the approximation advantage of
-attention and its additional statistical estimation and search complexity.
-The analysis develops signal-complexity thresholds characterizing when the
-benefits of nonlinear attention become large enough to justify its greater
-complexity.
-
-The project also investigates approximate representability, projection gain,
-multi-head attention, temporal dependence, and the empirical transition
-between linear and attention-based prediction.
+This work studies when softmax attention can outperform linear prediction in nonlinear time series.
+It develops a statistical framework that balances the approximation gains of nonlinear attention
+against the additional costs of model selection and estimation. The theoretical results are
+accompanied by simulation studies across different signal, noise, and sample-size regimes.
 
 ### Replication and Cross-Asset Extension of the Intraday Volume Estimator
 
-**Haochen Li**
+**Haochen Li**, Anru Zhang.
 
-*Manuscript based on my UCL MSc dissertation, currently being prepared for
-submission.*
+*Manuscript completed.*
 
-This project replicates and extends a Transformer-based probabilistic
-intraday volume estimator. The original framework is evaluated on U.S.
-equities and subsequently extended to G10 foreign-exchange markets.
+This work replicates and extends a Transformer-based probabilistic forecasting framework for
+intraday sequential data. It examines the model across multiple asset classes and forecast
+targets, including volume and realized volatility. The analysis considers robustness,
+causal deployment, and the effect of predictive improvements on downstream decision-making.
 
-The model produces probabilistic forecasts through a Student-t predictive
-distribution and incorporates asset embeddings, intraday temporal features,
-and multi-step training. The study also investigates extensions from trading
-volume to intraday volatility and market activity.
+## 2025
 
-A central part of the project examines whether improvements in statistical
-forecasting accuracy translate into economically meaningful execution
-benefits. The empirical analysis compares ex-post and fully causal scheduling
-procedures and evaluates their performance against historical intraday
-volume curves.
+### Efficient YOLOv11-AntiUAV Algorithm for Counter-UAV Target Detection
 
-A revised manuscript based on the dissertation is currently being developed
-for submission.
+Adviser: Assoc. Prof. Ying Hou, Xi'an University of Science and Technology · 2025
 
-## Current Research Directions
+Developed an efficient YOLOv11-based framework for detecting small and distant UAV targets under class imbalance. Introduced class-weighted loss design and simulated low-light and motion-blur conditions through data augmentation. Evaluated the model using precision, recall, ROC curves, and confusion matrices.
 
-My current work focuses on the following questions:
 
-- When does softmax attention outperform linear prediction in nonlinear time
-  series?
-- Which nonlinear structures and signal regimes justify the additional
-  complexity of attention?
-- How do multi-head attention and temporal encoding affect statistical
-  efficiency?
-- When do Transformer models outperform linear, tree-based, and recurrent
-  baselines in financial forecasting?
-- Can improvements in probabilistic volume and volatility forecasts produce
-  economically meaningful gains in trading and execution?
+### Lightweight YOLOv11 Network for Multi-Scale Feature Fusion in UAV Small-Object Detection
 
-## Research Areas
+Adviser: Assoc. Prof. Ying Hou, Xi'an University of Science and Technology · 2025
 
-- Statistical learning theory
-- Nonlinear time-series prediction
-- Transformers and attention mechanisms
-- Probabilistic forecasting
-- Intraday volume and volatility
-- Quantitative finance
-- Computer vision and semantic segmentation
+Developed lightweight YOLOv11 variants by simplifying the feature-pyramid pathway and replacing standard convolutions with grouped convolutions. Analyzed parameter counts, FLOPs, convergence, and speed-accuracy trade-offs across candidate architectures.
+
+
+### Multi-Scale Feature Fusion-Based YOLOv8 Object Detection for UAV Images
+
+Adviser: Assoc. Prof. Ying Hou, Xi'an University of Science and Technology · 2025
+
+Improved multi-scale feature extraction and bounding-box regression for dense small-object detection in aerial imagery. Contributed to data preprocessing, annotation, architectural modifications, and ablation studies evaluated using mAP and recall.

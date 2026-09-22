@@ -1,59 +1,279 @@
 ---
 title: "Haochen (Jerry) Li"
-description: "M.S. student in Statistical Science at Duke University, interested in deep learning and time-series forecasting."
+description: "M.S. Student in Stat @ Duke"
 image: images/profile.jpg
-
-about:
-  template: trestles
-  image-shape: round
-  image-width: 12em
-  links:
-    - icon: envelope
-      text: Email
-      href: mailto:h.li@duke.edu
-    - icon: github
-      text: GitHub
-      href: https://github.com/jerrylhc0513
-    - icon: linkedin
-      text: LinkedIn
-      href: https://www.linkedin.com/in/haochen-li-690ba3300
+toc: false
+page-layout: full
 ---
 
-I am an M.S. student in Statistical Science at Duke University. Before
-joining Duke, I studied Computational Finance and Mathematics with Economics
-at University College London.
+<style>
+/* ===================================================================
+   Sizes below are measured 1:1 from masterzhou1.github.io at 1512px:
+   container 1140 · left card 255 · right column 825 · gap 30
+   base 16px · org line 16px · degree/date 12.8px · name 24px
+   card: radius 8px, no border, shadow 0 2px 4px rgba(0,0,0,.075),
+         padding 24px 24px 16px
+   =================================================================== */
 
-My research interests lie in the theory and applications of deep learning,
-with a particular focus on time-series forecasting.
+body.quarto-light { background: #f8f9fa; }
 
-## Selected Research
+/* the About template is gone, so hide Quarto's own page title */
+#title-block-header { display: none; }
 
-### [Research on Lightweight Detection Algorithms for Unsafe Passenger Behavior on Escalators](https://ieeexplore.ieee.org/abstract/document/11504053/)
+.home-wrap {
+  display: grid;
+  grid-template-columns: 255px minmax(0, 1fr);
+  gap: 30px;
+  align-items: start;
+  box-sizing: border-box;
+  max-width: 1240px;
+  margin: 24px auto 48px;
+  padding: 0 15px;
+}
 
-Nan Zhang, Ying Hou, Qilun Li, **Haochen Li**, Wei Zhang, and Chaoyang Sun.
+/* ---------- cards ---------- */
+.hcard {
+  box-sizing: border-box;
+  padding: 24px 24px 16px;
+  background: #fff;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075);
+}
 
-*2026 9th International Conference on Advanced Electronic Technology,
-Computers and Software Engineering*, 2026.
+.home-right .hcard + .hcard { margin-top: 24px; }
 
-[View on IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/11504053/)
+.hcard h2 {
+  margin: 0 0 8px;
+  padding: 0;
+  border: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.2px;
+}
 
-### [Integrating Convexity and DeepLabv3+ for Semantic Segmentation of Power Lines](https://doi.org/10.21203/rs.3.rs-8607246/v1)
+.hcard-about h2 { margin-bottom: 10px; font-size: 20px; line-height: 24px; }
 
-Ying Hou, Jindou Tuo, **Haochen Li**, Zhuoxin Yan, Xuemei Huang, and Yuqi Wang.
+/* ---------- left card ---------- */
+.home-left { text-align: center; }
 
-*Research Square Preprint*, 2026.
+.home-left .photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
 
-[View Preprint](https://doi.org/10.21203/rs.3.rs-8607246/v1)
+.pname {
+  margin: 16px 0 4px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
 
+.psub { margin: 0; font-size: 16px; line-height: 24.8px; }
+
+.pmail {
+  margin: 6px 0 0;
+  font-family: "Courier New", Courier, ui-monospace, monospace;
+  font-size: 12.8px;
+  line-height: 19.84px;
+}
+
+.pmail a { color: #007bff; text-decoration: none; }
+.pmail a:hover { text-decoration: underline; }
+
+.picons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 14px;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.picons a { color: #007bff; text-decoration: none; }
+.picons a:hover { color: #0056b3; }
+
+/* ---------- right column ---------- */
+.home-right { font-size: 16px; line-height: 25.6px; }
+.home-right p { margin: 0 0 8px; }
+.home-right p:last-child { margin-bottom: 0; }
+
+/* education / experience rows:
+   logo slot 22px + 6px gap = 28px = the indent on .cv-sub */
+.cv-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: auto auto;
+  column-gap: 16px;
+  padding: 2px 0 6px;
+}
+
+.cv-row:last-child { padding-bottom: 0; }
+
+.cv-org { grid-column: 1; grid-row: 1; font-size: 16px; line-height: 24.8px; }
+
+.cv-sub {
+  grid-column: 1;
+  grid-row: 2;
+  padding-left: 28px;
+  font-size: 12.8px;
+  line-height: 19.84px;
+}
+
+.cv-date {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: end;
+  font-size: 12.8px;
+  font-style: italic;
+  line-height: 19.84px;
+  white-space: nowrap;
+}
+
+.cv-logo {
+  display: inline-block;
+  width: 22px;
+  height: 18px;
+  margin-right: 6px;
+  object-fit: contain;
+  object-position: left center;
+  vertical-align: -3px;
+}
+
+/* selected studies */
+.study-item { padding: 4px 0 8px; }
+.study-item:last-of-type { padding-bottom: 4px; }
+
+.study-title { font-size: 16px; font-weight: 700; line-height: 24.8px; }
+.study-title a { color: inherit; text-decoration: none; }
+.study-title a:hover { color: #007bff; text-decoration: underline; }
+
+.study-meta { font-size: 12.8px; font-style: italic; line-height: 19.84px; }
+.study-more { margin-top: 10px; font-size: 12.8px; }
+
+/* research areas */
+.research-areas ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px 24px;
+  margin: 0;
+  padding-left: 20px;
+  font-size: 16px;
+  line-height: 24.8px;
+}
+
+@media (max-width: 991px) {
+  .home-wrap { grid-template-columns: minmax(0, 1fr); gap: 24px; max-width: 640px; }
+  .home-left { max-width: 300px; margin: 0 auto; }
+  .research-areas ul { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 576px) {
+  .cv-row { grid-template-columns: minmax(0, 1fr); }
+  .cv-date { grid-column: 1; grid-row: 3; padding-left: 28px; text-align: left; white-space: normal; }
+}
+</style>
+
+:::: {.home-wrap}
+
+::: {.hcard .home-left}
+<img src="images/profile.jpg" class="photo" alt="Haochen (Jerry) Li">
+
+<div class="pname">Haochen (Jerry) Li</div>
+<div class="psub">M.S. Student in Stat @ Duke</div>
+<div class="pmail"><a href="mailto:h.li@duke.edu">h.li@duke.edu</a></div>
+
+<div class="picons">
+  <a href="mailto:h.li@duke.edu" title="Email"><i class="bi bi-envelope-fill"></i></a>
+  <a href="https://github.com/jerrylhc0513" title="GitHub"><i class="bi bi-github"></i></a>
+  <a href="https://www.linkedin.com/in/haochen-li-690ba3300" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+</div>
+:::
+
+::: {.home-right}
+
+::: {.hcard .hcard-about}
+## About Me
+
+I am an M.S. student in Statistical Science at Duke University. My research interests lie in the theory and applications of machine learning and deep learning, with a focus on time-series and sequential data.
+:::
+
+::: {.hcard}
 ## Education
 
-**Duke University**  
-M.S. in Statistical Science
+<div class="cv-row">
+  <div class="cv-org"><img class="cv-logo" src="images/index/duke.png" alt="">Duke University</div>
+  <div class="cv-sub">M.S. in Statistical Science</div>
+  <div class="cv-date">Aug. 2026 – May 2028</div>
+</div>
 
-**University College London**  
-M.Sc. Computational Finance
+<div class="cv-row">
+  <div class="cv-org"><img class="cv-logo" src="images/index/ucl.jpg" alt="">University College London</div>
+  <div class="cv-sub">M.Sc. in Computational Finance, Distinction</div>
+  <div class="cv-date">Sep. 2025 – Sep. 2026</div>
+</div>
 
-**University College London**  
-B.Sc. Mathematics with Economics, First Class Honours
+<div class="cv-row">
+  <div class="cv-org"><img class="cv-logo" src="images/index/ucl.jpg" alt="">University College London</div>
+  <div class="cv-sub">B.Sc. in Mathematics with Economics, First-Class Honours</div>
+  <div class="cv-date">Sep. 2022 – Jul. 2025</div>
+</div>
+:::
 
-[View all research](research.qmd)
+::: {.hcard}
+## Experience
+
+<div class="cv-row">
+  <div class="cv-org"><img class="cv-logo" src="images/index/hsbc.png" alt="">HSBC, London, UK</div>
+  <div class="cv-sub">Quantitative Research Intern</div>
+  <div class="cv-date">May 2026 – Sep. 2026</div>
+</div>
+
+<div class="cv-row">
+  <div class="cv-org"><img class="cv-logo" src="images/index/kpmg.png" alt="">KPMG, Guangzhou, China</div>
+  <div class="cv-sub">Strategy Consulting Intern</div>
+  <div class="cv-date">Jun. 2025 – Sep. 2025</div>
+</div>
+:::
+
+::: {.hcard}
+## Selected Studies
+
+<div class="study-item">
+  <div class="study-title">When Does Softmax Attention Outperform Linear Prediction in Nonlinear Time Series?</div>
+  <div class="study-meta">Haochen Li and Anru Zhang · Manuscript in preparation</div>
+</div>
+
+<div class="study-item">
+  <div class="study-title"><a href="https://doi.org/10.1109/AETCSE69203.2026.11504053">Research on Lightweight Detection Algorithms for Unsafe Passenger Behavior on Escalators</a></div>
+  <div class="study-meta">2026 9th International Conference on Advanced Electronic Technology, Computers and Software Engineering</div>
+</div>
+
+<div class="study-item">
+  <div class="study-title"><a href="https://doi.org/10.21203/rs.3.rs-8607246/v1">Integrating Convexity and DeepLabv3+ for Semantic Segmentation of Power Lines</a></div>
+  <div class="study-meta">Research Square preprint, 2026 · under review</div>
+</div>
+
+<div class="study-more">[View all research](research.qmd)</div>
+:::
+
+::: {.hcard}
+## Research Areas
+
+::: {.research-areas}
+- Statistical learning theory
+- Machine learning
+- Deep learning
+- Time-series forecasting
+- Probabilistic forecasting
+- Transformers and attention
+- Flow matching
+- Generative modeling
+:::
+:::
+
+:::
+
+::::

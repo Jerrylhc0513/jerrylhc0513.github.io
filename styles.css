@@ -1,1 +1,205 @@
-/* css styles */
+/* Site styles. Page-width and Quarto grid placement are intentionally left
+   untouched so every page uses the same standard article layout. */
+
+:root {
+  --hobby-yellow: #f2c94c;
+  --hobby-pink: #efb6c8;
+  --hobby-dark: #202329;
+  --hobby-soft: #f8f8f6;
+}
+
+.hobby-hero {
+  margin: 1rem 0 2.5rem;
+  padding: 2.2rem;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    rgba(24, 27, 32, 0.98),
+    rgba(52, 54, 60, 0.94)
+  );
+  border-left: 7px solid var(--hobby-yellow);
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.hobby-hero p {
+  max-width: 800px;
+  margin-bottom: 0;
+}
+
+.hobby-symbols {
+  margin-bottom: 0.8rem;
+  color: var(--hobby-yellow);
+  font-size: 2rem;
+  letter-spacing: 0.25rem;
+}
+
+.hobby-block {
+  margin: 2.2rem 0;
+  padding: 1.6rem 1.8rem;
+  background: var(--hobby-soft);
+  border: 1px solid rgba(30, 30, 30, 0.08);
+  border-top: 4px solid var(--hobby-yellow);
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(20, 20, 20, 0.07);
+}
+
+.hobby-block:nth-of-type(even) {
+  border-top-color: var(--hobby-pink);
+}
+
+.hobby-block h2 {
+  margin-top: 0;
+  color: var(--hobby-dark);
+}
+
+.hobby-block figure {
+  margin: 0.7rem 0;
+}
+
+.hobby-block img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 11px;
+  box-shadow: 0 6px 18px rgba(20, 20, 20, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hobby-block img:hover {
+  transform: translateY(-5px) scale(1.015);
+  box-shadow: 0 13px 28px rgba(20, 20, 20, 0.2);
+}
+
+.hobby-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.3rem;
+}
+
+.hobby-tags span {
+  padding: 0.55rem 1rem;
+  color: var(--hobby-dark);
+  background: rgba(242, 201, 76, 0.25);
+  border: 1px solid rgba(242, 201, 76, 0.7);
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .hobby-hero,
+  .hobby-block {
+    padding: 1.2rem;
+  }
+
+  .hobby-symbols {
+    font-size: 1.6rem;
+  }
+}
+
+
+/* ===================================================================
+   Dark navbar (matches the charcoal bar on the reference site)
+   =================================================================== */
+.navbar {
+  background-color: #343a40 !important;
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-nav .nav-link,
+.navbar .quarto-navbar-tools a {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.navbar .navbar-brand {
+  color: #fff !important;
+  font-weight: 700;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active,
+.navbar .quarto-navbar-tools a:hover {
+  color: #fff !important;
+}
+
+/* ===================================================================
+   Floating index rail (research + projects).
+   position:fixed, so it takes no layout space. Collapsed it is a column
+   of dots pinned to the right edge; on hover it widens and shows the
+   section names. Every dot links to its heading.
+   =================================================================== */
+#quarto-margin-sidebar {
+  display: block !important;
+  position: fixed !important;
+  top: 96px;
+  right: 12px;
+  z-index: 1000;
+  box-sizing: border-box;
+  width: 34px;
+  max-height: calc(100vh - 140px);
+  overflow: hidden;
+  padding: 8px 6px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: width 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+}
+
+#quarto-margin-sidebar:hover {
+  width: 258px;
+  overflow-y: auto;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+#quarto-margin-sidebar #toc-title { display: none; }
+
+#quarto-margin-sidebar nav ul,
+#quarto-margin-sidebar #TOC ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  border: 0;
+}
+
+#quarto-margin-sidebar #TOC ul ul { padding-left: 10px; }
+
+#quarto-margin-sidebar #TOC a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 4px 2px !important;
+  border: 0 !important;
+  color: #6c757d;
+  font-size: 12.8px;
+  line-height: 1.35;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+/* the dot stays visible while the label is clipped */
+#quarto-margin-sidebar #TOC a::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ced4da;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+#quarto-margin-sidebar #TOC a:hover,
+#quarto-margin-sidebar #TOC a.active { color: #0d6efd; }
+
+#quarto-margin-sidebar #TOC a:hover::before,
+#quarto-margin-sidebar #TOC a.active::before {
+  background: #0d6efd;
+  transform: scale(1.25);
+}
+
+/* on narrow screens the rail would sit on top of the text — hide it */
+@media (max-width: 1100px) {
+  #quarto-margin-sidebar { display: none !important; }
+}

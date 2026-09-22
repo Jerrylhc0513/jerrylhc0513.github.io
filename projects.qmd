@@ -1,27 +1,469 @@
 ---
-title: "Projects"
-description: "Research and data science projects by Haochen (Jerry) Li."
+title: "Selected Projects"
+subtitle: "Probabilistic forecasting, machine learning, deep learning and nonlinear dynamics"
+toc: true
+toc-depth: 2
+page-layout: full
 ---
 
-## Intraday Volume Estimator
+<style>
+/* ===================================================================
+   Shared type scale — identical to index.qmd, measured 1:1 from the
+   reference site: base 16px / 25.6px, meta 12.8px / 19.84px,
+   h1 24px, section headings 20px, sub-headings 16px.
+   Cards: radius 8px, no border, shadow 0 2px 4px rgba(0,0,0,.075),
+   padding 24px. Page background #f8f9fa.
+   =================================================================== */
 
-Replication and cross-asset extension of a probabilistic Transformer model
-for intraday volume forecasting.
+body.quarto-light { background: #f8f9fa; }
 
-**Markets:** U.S. equities and G10 foreign exchange  
-**Methods:** Transformer, Student-t likelihood, multi-step training  
-**Tools:** Python, PyTorch, LSEG data
+/* ===== shared page container — identical on index / research / projects /
+   hobbies, so every page has the same left edge and the same width.
+   1110px centred = the content width of index.qmd's 1140px container. ===== */
 
-## Nonlinear Time Series and Attention
+#quarto-content main.content {
+  box-sizing: border-box;
+  grid-column: 1 / -1 !important;
+  width: 100%;
+  max-width: 1210px;
+  margin: 24px auto 48px !important;
+  padding: 24px !important;
+}
 
-Theoretical and empirical investigation of the conditions under which
-softmax attention can outperform linear prediction in nonlinear
-autoregressive models.
+#quarto-content main.content {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075);
+}
 
-**Topics:** approximation error, estimation complexity, attention search
-cost, statistical crossover thresholds
 
-## Statistical Computing
+#quarto-document-content { color: #27313d; font-size: 16px; line-height: 25.6px; }
 
-Projects in statistical modelling, data analysis, SQL, Python, R, and
-reproducible scientific publishing with Quarto.
+.quarto-title h1.title { font-size: 24px; font-weight: 700; line-height: 30px; color: #172332; }
+.quarto-title .subtitle { font-size: 16px; line-height: 24.8px; color: #6c757d; }
+
+#quarto-document-content h2 {
+  margin: 34px 0 6px;
+  padding: 0 0 8px 12px;
+  color: #172332;
+  border-left: 4px solid #17365d;
+  border-bottom: 1px solid #d8e0e8;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+}
+
+#quarto-document-content h2:first-of-type { margin-top: 8px; }
+
+.project-intro {
+  margin: 0 0 28px;
+  padding: 16px 18px;
+  color: #334155;
+  background: #f5f7fa;
+  border-left: 4px solid #17365d;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+.project-meta {
+  margin: 8px 0 12px;
+  color: #315f8c;
+  font-size: 12.8px;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  line-height: 19.84px;
+  text-transform: uppercase;
+}
+
+.project-lead { margin: 12px 0 14px; color: #384454; font-size: 16px; line-height: 25.6px; }
+
+.project-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 14px 0 16px;
+}
+
+.summary-panel {
+  padding: 16px 18px 14px;
+  background: #fff;
+  border: 1px solid #d8e0e8;
+  border-radius: 8px;
+}
+
+.summary-panel h3 {
+  margin: 0 0 8px;
+  color: #17365d;
+  font-size: 12.8px;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  line-height: 19.84px;
+  text-transform: uppercase;
+}
+
+.summary-panel ul { margin: 0; padding-left: 20px; color: #465365; font-size: 12.8px; line-height: 19.84px; }
+.summary-panel li + li { margin-top: 5px; }
+
+.project-tools { margin: 14px 0 18px; line-height: 2; }
+
+.project-tools code {
+  margin-right: 4px;
+  padding: 4px 8px;
+  color: #304b68;
+  background: #eef3f7;
+  border: 1px solid #d7e1e9;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 12.8px;
+  font-weight: 600;
+}
+
+.figure-note { margin: 12px 0 4px; color: #687586; font-size: 12.8px; line-height: 19.84px; }
+
+.figure-grid { display: grid; gap: 14px; margin: 10px 0 26px; }
+.figure-grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.figure-grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.figure-item {
+  min-width: 0;
+  padding: 9px 9px 8px;
+  background: #fff;
+  border: 1px solid #d8e0e8;
+  border-radius: 8px;
+}
+
+.figure-item > p:first-child { margin: 0; line-height: 0; }
+.figure-item a { display: block; text-decoration: none; }
+
+.figure-item img {
+  display: block;
+  width: 100%;
+  height: 215px;
+  margin: 0 auto;
+  object-fit: contain;
+  background: #fff;
+}
+
+.figure-item p:last-child {
+  min-height: 2.5em;
+  margin: 8px 2px 1px;
+  color: #687586;
+  font-size: 12.8px;
+  line-height: 19.84px;
+  text-align: center;
+}
+
+.figure-item em { font-style: normal; }
+
+.equation-panel {
+  margin: 18px 0;
+  padding: 8px 16px;
+  overflow-x: auto;
+  background: #f7f9fb;
+  border: 1px solid #d8e0e8;
+  border-left: 4px solid #315f8c;
+  border-radius: 6px;
+}
+
+hr { margin: 34px 0 0; border: 0; border-top: 1px solid #e1e6ec; }
+
+#TOC { padding-left: 12px; border-left: 1px solid #d8e0e8; }
+#TOC a { color: #536274; font-size: 12.8px; }
+#TOC a:hover, #TOC .active { color: #17365d; }
+
+@media (max-width: 900px) {
+  .figure-grid.cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 680px) {
+  main#quarto-document-content { padding: 18px 16px 16px; }
+  .project-summary-grid,
+  .figure-grid.cols-2,
+  .figure-grid.cols-3 { grid-template-columns: 1fr; }
+  .figure-item img { height: auto; max-height: 260px; }
+  #quarto-document-content h2 { margin-top: 26px; font-size: 18px; }
+}
+</style>
+
+::: {.project-intro}
+These projects reflect my work across applied machine learning, mathematics, statistics, data sciene, quantitative finance and economics. My approach is to begin with careful data construction, compare complex methods against credible baselines, preserve realistic time ordering, and connect model outputs to interpretable decisions.
+:::
+
+## 01 · Probabilistic Intraday Volume and Volatility Forecasting {#project-hsbc}
+
+::: {.project-meta}
+HSBC Quantitative Research · UCL MSc Dissertation · 2026
+:::
+
+::: {.project-lead}
+I replicated the Intraday Volume Estimator of Lee and Park (2024) on current U.S. equity data, then extended it across asset classes to G10 foreign exchange and across targets from intraday volume to realized volatility. The objective was not only predictive accuracy, but a probabilistic forecasting system whose information set and execution logic remain valid during the trading day.
+:::
+
+:::: {.project-summary-grid}
+::: {.summary-panel}
+### Model and data
+
+- Two-tower encoder–decoder Transformer with Time2Vec embeddings and a Student-t density head.
+- Twenty U.S. equities and five G10 FX pairs, with volume and Garman–Klass volatility targets.
+- Shared evaluation against Linear, XGBoost, RNN, LSTM, BiLSTM, and historical-mean baselines.
+:::
+
+::: {.summary-panel}
+### Main findings
+
+- Identified four end-of-day look-ahead inputs and replaced them with information available in real time.
+- Model rankings depended on the target: the Transformer was strongest for volatility, while a compact recurrent baseline led equity-volume forecasting.
+- The causal FX schedule achieved 0.33 bp mean absolute VWAP tracking error, compared with 1.31 bp for the historical schedule and 1.66 bp for TWAP.
+:::
+::::
+
+::: {.project-tools}
+`PyTorch` `Transformers` `Probabilistic forecasting` `Market microstructure` `G10 FX` `VWAP execution` `Time series`
+:::
+
+
+:::: {.figure-grid .cols-3}
+::: {.figure-item}
+[![](fig/projects/hsbc-equity-r2-by-stock.png){fig-alt="Mean validation R-squared by equity"}](fig/projects/hsbc-equity-r2-by-stock.png)
+
+*Mean validation R² across three seeds for twenty U.S. equities.*
+:::
+
+::: {.figure-item}
+[![](fig/projects/hsbc-fx-volume-forecast.png){fig-alt="FX log-volume predictions"}](fig/projects/hsbc-fx-volume-forecast.png)
+
+*Observed and predicted FX log-volume ratios across five currency pairs.*
+:::
+
+::: {.figure-item}
+[![](fig/projects/hsbc-fx-volatility-forecast.png){fig-alt="FX log-volatility predictions"}](fig/projects/hsbc-fx-volatility-forecast.png)
+
+*Observed and predicted log realized volatility across five FX pairs.*
+:::
+
+::: {.figure-item}
+[![](fig/projects/hsbc-equity-volatility-feature-importance.png){fig-alt="Equity-volatility feature importance"}](fig/projects/hsbc-equity-volatility-feature-importance.png)
+
+*Permutation feature importance for the equity-volatility target.*
+:::
+
+::: {.figure-item}
+[![](fig/projects/hsbc-equity-execution.png){fig-alt="Equity execution example"}](fig/projects/hsbc-equity-execution.png)
+
+*Model-implied minute weights and cumulative completion for an equity order.*
+:::
+
+::: {.figure-item}
+[![](fig/projects/hsbc-fx-execution.png){fig-alt="FX execution example"}](fig/projects/hsbc-fx-execution.png)
+
+*FX execution schedules under the model, historical profile, and TWAP.*
+:::
+::::
+
+---
+
+## 02 · Cryptocurrency Direction Forecasting with Machine Learning {#project-crypto-ml}
+
+::: {.project-meta}
+UCL MSc · Advanced Machine Learning Coursework · 2026
+:::
+
+::: {.project-lead}
+This project compared logistic regression, LSTM, and Transformer models for predicting the direction of hourly BTC and ETH returns. The analysis emphasized chronological evaluation and the question of whether added sequence-model complexity produces stable out-of-sample gains in a low-signal financial setting.
+:::
+
+:::: {.project-summary-grid}
+::: {.summary-panel}
+### Workflow
+
+- Cleaned and aligned hourly BTCUSDT and ETHUSDT price histories and constructed log returns.
+- Used chronological train, validation, and test partitions to prevent future information from entering model selection.
+- Compared a transparent linear classifier with recurrent and attention-based neural networks.
+:::
+
+::: {.summary-panel}
+### Results
+
+- Predictability was weak overall, with test AUC values close to 0.5.
+- For BTC, the Transformer was marginally strongest (AUC 0.547), followed by LSTM (0.541) and logistic regression (0.532).
+- For ETH, logistic regression performed best (AUC 0.548), while LSTM and Transformer were close to random ranking.
+:::
+::::
+
+::: {.project-tools}
+`Logistic regression` `LSTM` `Transformer` `BTC` `ETH` `ROC–AUC` `Time-series validation`
+:::
+
+:::: {.figure-grid .cols-2}
+::: {.figure-item}
+[![](fig/projects/crypto-direction-eda.png){fig-alt="BTC and ETH exploratory data analysis"}](fig/projects/crypto-direction-eda.png)
+
+*Cleaned hourly prices and log-return distributions for BTC and ETH.*
+:::
+
+::: {.figure-item}
+[![](fig/projects/crypto-direction-roc.png){fig-alt="BTC and ETH ROC curves"}](fig/projects/crypto-direction-roc.png)
+
+*Test ROC curves for logistic regression, LSTM, and Transformer classifiers.*
+:::
+::::
+
+---
+
+## 03 · Algorithmic Trading Strategies for Cryptocurrency Markets {#project-trading}
+
+::: {.project-meta}
+UCL MSc · Algorithmic Trading Coursework · 2026
+:::
+
+::: {.project-lead}
+I designed and evaluated two systematic cryptocurrency strategies using Binance one-minute data: a cross-asset mean-reversion strategy and a BNB–DOGE cointegration pairs strategy. The backtest separated signal construction, position sizing, portfolio aggregation, and implementation costs.
+:::
+
+:::: {.project-summary-grid}
+::: {.summary-panel}
+### Research design
+
+- BTCUSDT, ETHUSDT, BNBUSDT, and DOGEUSDT observations sampled into 15-minute decision intervals.
+- Volatility-targeted position sizing and portfolio-level risk aggregation.
+- Transaction-cost estimates derived from the Roll model and incorporated into net performance.
+:::
+
+::: {.summary-panel}
+### Interpretation
+
+- Compared short-horizon reversal with relative-value convergence as distinct sources of predictability.
+- Reported gross and net-of-slippage performance instead of relying on frictionless results.
+- Examined regime dependence and the sensitivity of short-horizon strategies to execution assumptions.
+:::
+::::
+
+::: {.project-tools}
+`Python` `Binance data` `Mean reversion` `Cointegration` `Volatility targeting` `Backtesting` `Transaction costs`
+:::
+
+:::: {.figure-grid .cols-2}
+::: {.figure-item}
+[![](fig/projects/crypto-mean-reversion-signals.png){fig-alt="Cryptocurrency mean-reversion signals"}](fig/projects/crypto-mean-reversion-signals.png)
+
+*Fifteen-minute long and short signals across the actively traded assets.*
+:::
+
+::: {.figure-item}
+[![](fig/projects/crypto-strategy-backtest.png){fig-alt="Cryptocurrency strategy backtests"}](fig/projects/crypto-strategy-backtest.png)
+
+*Portfolio value for the mean-reversion and pairs strategies after estimated slippage.*
+:::
+::::
+
+---
+
+## 04 · Probability Calibration in U.S. Recession Forecasting {#project-recession}
+
+::: {.project-meta}
+UCL MSc · Data Science Coursework · 2026
+:::
+
+::: {.project-lead}
+This project examined whether predicted recession probabilities were empirically reliable, rather than evaluating models only by their ability to rank observations. I forecast U.S. recessions one, two, and three quarters ahead and compared discrimination with probability calibration.
+:::
+
+:::: {.project-summary-grid}
+::: {.summary-panel}
+### Methods
+
+- Sparse L1-regularized logistic regression and tuned XGBoost classifiers.
+- Platt scaling, isotonic regression, and temperature scaling.
+- Walk-forward leave-one-split-out calibration preserving chronological order.
+:::
+
+::: {.summary-panel}
+### Evaluation
+
+- Compared Brier score, log loss, expected calibration error, and AUC.
+- Calibration generally improved probability accuracy, although gains could reduce ranking performance.
+- Platt scaling was the most consistent; isotonic regression was more prone to small-sample overfitting.
+:::
+::::
+
+::: {.project-tools}
+`scikit-learn` `XGBoost` `Probability calibration` `Macroeconomic forecasting` `Walk-forward validation`
+:::
+
+:::: {.figure-grid .cols-2}
+::: {.figure-item}
+[![](fig/projects/recession-calibration-comparison.png){fig-alt="Recession reliability diagrams"}](fig/projects/recession-calibration-comparison.png)
+
+*Reliability diagrams comparing calibration methods across forecast horizons.*
+:::
+
+::: {.figure-item}
+[![](fig/projects/recession-probability-paths.png){fig-alt="Predicted recession probability paths"}](fig/projects/recession-probability-paths.png)
+
+*Predicted recession probabilities over time for the linear and XGBoost models.*
+:::
+::::
+
+---
+
+## 05 · Chaos and Hopf Bifurcation in a Financial System {#project-chaos}
+
+::: {.project-meta}
+UCL BSc · Research Project · 2024
+:::
+
+::: {.project-lead}
+In this research project, I reproduced and explored a three-state nonlinear financial system linking the interest rate, investment demand, and price index. I derived the stability conditions and implemented the numerical analysis to study how parameter changes and initial conditions alter the system's long-run behavior.
+:::
+
+::: {.equation-panel}
+$$
+\dot{x}=z+(y-a)x, \qquad
+\dot{y}=1-by-x^2, \qquad
+\dot{z}=-x-cz.
+$$
+:::
+
+:::: {.project-summary-grid}
+::: {.summary-panel}
+### Analysis
+
+- Derived equilibrium points and studied local stability through the Jacobian and its eigenvalues.
+- Simulated trajectories under alternative saving-rate parameters and initial conditions.
+- Examined a delayed-feedback extension for investment demand and the associated Hopf-bifurcation conditions.
+:::
+
+::: {.summary-panel}
+### Visualization
+
+- Produced three-dimensional trajectories and two-dimensional phase projections.
+- Used parameter sweeps and bifurcation diagrams to identify qualitative regime changes.
+- Connected stable equilibria, periodic motion, and chaotic behavior to the model parameters.
+:::
+::::
+
+::: {.project-tools}
+`Python` `MATLAB` `Nonlinear ODEs` `Dynamical systems` `Stability analysis` `Chaos` `Hopf bifurcation`
+:::
+
+:::: {.figure-grid .cols-3}
+::: {.figure-item}
+[![](fig/projects/financial-chaos-attractor.jpg){fig-alt="Three-dimensional financial-system trajectory"}](fig/projects/financial-chaos-attractor.jpg)
+
+*Three-dimensional trajectory of the nonlinear financial system.*
+:::
+
+::: {.figure-item}
+[![](fig/projects/financial-chaos-phase-plots.jpg){fig-alt="Financial-system phase projections"}](fig/projects/financial-chaos-phase-plots.jpg)
+
+*Phase-plane projections showing the geometry of the simulated trajectory.*
+:::
+
+::: {.figure-item}
+[![](fig/projects/financial-chaos-bifurcation.jpg){fig-alt="Financial-system bifurcation diagram"}](fig/projects/financial-chaos-bifurcation.jpg)
+
+*Bifurcation diagram illustrating qualitative changes as a parameter varies.*
+:::
+::::

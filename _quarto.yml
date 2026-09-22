@@ -7,13 +7,14 @@ website:
   description: "Haochen (Jerry) Li — M.S. student in Statistical Science at Duke University, working on time series, machine learning, and quantitative finance."
 
   navbar:
+    background: dark
     left:
-      - href: index.qmd
-        text: Home
       - href: research.qmd
         text: Research
       - href: projects.qmd
         text: Projects
+      - href: hobbies.qmd
+        text: Hobbies
 
     right:
       - icon: github
@@ -28,8 +29,7 @@ website:
 
 format:
   html:
-    theme:
-      light: cosmo
-      dark: darkly
+    theme: cosmo
     css: styles.css
     toc: true
+    page-layout: article
