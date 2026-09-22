@@ -4,63 +4,63 @@
     "href": "research.html",
     "title": "Research",
     "section": "",
-    "text": "My research interests lie at the intersection of statistical learning, deep learning, time-series forecasting, and quantitative finance.\nMy earlier work focused on computer vision and lightweight deep-learning models. My current research studies attention mechanisms in nonlinear time series and probabilistic forecasting for financial markets."
+    "text": "My research interests lie in the theoretical foundations and practical applications of machine learning and deep learning."
   },
   {
-    "objectID": "research.html#publications",
-    "href": "research.html#publications",
+    "objectID": "research.html#section",
+    "href": "research.html#section",
     "title": "Research",
-    "section": "Publications",
-    "text": "Publications\n\nResearch on Lightweight Detection Algorithms for Unsafe Passenger Behavior on Escalators\nNan Zhang, Ying Hou, Qilun Li, Haochen Li, Wei Zhang, and Chaoyang Sun.\n2026 9th International Conference on Advanced Electronic Technology, Computers and Software Engineering, 2026.\nThis work studies lightweight deep-learning algorithms for detecting unsafe passenger behaviour in escalator environments. It focuses on balancing detection accuracy, computational efficiency, and deployment feasibility in resource-constrained settings.\nIEEE Xplore"
+    "section": "2026",
+    "text": "2026\n\nResearch on Lightweight Detection Algorithms for Unsafe Passenger Behavior on Escalators\nNan Zhang, Ying Hou, Qilun Li, Haochen Li, Wei Zhang, and Chaoyang Sun.\n2026 9th International Conference on Advanced Electronic Technology, Computers and Software Engineering, 2026.\nThis work studies lightweight deep-learning algorithms for detecting unsafe passenger behaviour in escalator environments. It focuses on balancing detection accuracy, computational efficiency, and deployment feasibility in resource-constrained settings.\nIEEE Xplore\n\n\nIntegrating Convexity and DeepLabv3+ for Semantic Segmentation of Power Lines\nYing Hou, Jindou Tuo, Haochen Li, Zhuoxin Yan, Xuemei Huang, and Yuqi Wang.\nResearch Square Preprint, 2026.\nThis paper proposes PLE-DeepLabv3+, a lightweight semantic-segmentation model for detecting thin and low-contrast power lines in complex aerial imagery. The model combines a reconfigured ConvNeXtV2 backbone, direction-selective coordinate attention, efficient multi-scale feature fusion, adaptive edge detection, and a class-aware focal loss.\nPreprint | DOI\n\n\nWhen Does Softmax Attention Outperform Linear Prediction in Nonlinear Time Series?\nHaochen Li, Anru Zhang.\nManuscript in preparation for submission.\nThis work studies when softmax attention can outperform linear prediction in nonlinear time series. It develops a statistical framework that balances the approximation gains of nonlinear attention against the additional costs of model selection and estimation. The theoretical results are accompanied by simulation studies across different signal, noise, and sample-size regimes.\n\n\nReplication and Cross-Asset Extension of the Intraday Volume Estimator\nHaochen Li, Anru Zhang.\nManuscript completed.\nThis work replicates and extends a Transformer-based probabilistic forecasting framework for intraday sequential data. It examines the model across multiple asset classes and forecast targets, including volume and realized volatility. The analysis considers robustness, causal deployment, and the effect of predictive improvements on downstream decision-making."
   },
   {
-    "objectID": "research.html#preprints",
-    "href": "research.html#preprints",
+    "objectID": "research.html#section-1",
+    "href": "research.html#section-1",
     "title": "Research",
-    "section": "Preprints",
-    "text": "Preprints\n\nIntegrating Convexity and DeepLabv3+ for Semantic Segmentation of Power Lines\nYing Hou, Jindou Tuo, Haochen Li, Zhuoxin Yan, Xuemei Huang, and Yuqi Wang.\nResearch Square Preprint, 2026.\nThis paper proposes PLE-DeepLabv3+, a lightweight semantic-segmentation model for detecting thin and low-contrast power lines in complex aerial imagery. The model combines a reconfigured ConvNeXtV2 backbone, direction-selective coordinate attention, efficient multi-scale feature fusion, adaptive edge detection, and a class-aware focal loss.\nPreprint | DOI"
-  },
-  {
-    "objectID": "research.html#manuscripts-in-preparation",
-    "href": "research.html#manuscripts-in-preparation",
-    "title": "Research",
-    "section": "Manuscripts in Preparation",
-    "text": "Manuscripts in Preparation\n\nWhen Does Softmax Attention Outperform Linear Prediction in Nonlinear Time Series?\nHaochen Li\nManuscript in preparation.\nThis project studies the statistical conditions under which nonlinear softmax attention can outperform classical linear prediction in nonlinear autoregressive time series.\nThe central mechanism is a trade-off between the approximation advantage of attention and its additional statistical estimation and search complexity. The analysis develops signal-complexity thresholds characterizing when the benefits of nonlinear attention become large enough to justify its greater complexity.\nThe project also investigates approximate representability, projection gain, multi-head attention, temporal dependence, and the empirical transition between linear and attention-based prediction.\n\n\nReplication and Cross-Asset Extension of the Intraday Volume Estimator\nHaochen Li\nManuscript based on my UCL MSc dissertation, currently being prepared for submission.\nThis project replicates and extends a Transformer-based probabilistic intraday volume estimator. The original framework is evaluated on U.S. equities and subsequently extended to G10 foreign-exchange markets.\nThe model produces probabilistic forecasts through a Student-t predictive distribution and incorporates asset embeddings, intraday temporal features, and multi-step training. The study also investigates extensions from trading volume to intraday volatility and market activity.\nA central part of the project examines whether improvements in statistical forecasting accuracy translate into economically meaningful execution benefits. The empirical analysis compares ex-post and fully causal scheduling procedures and evaluates their performance against historical intraday volume curves.\nA revised manuscript based on the dissertation is currently being developed for submission."
-  },
-  {
-    "objectID": "research.html#current-research-directions",
-    "href": "research.html#current-research-directions",
-    "title": "Research",
-    "section": "Current Research Directions",
-    "text": "Current Research Directions\nMy current work focuses on the following questions:\n\nWhen does softmax attention outperform linear prediction in nonlinear time series?\nWhich nonlinear structures and signal regimes justify the additional complexity of attention?\nHow do multi-head attention and temporal encoding affect statistical efficiency?\nWhen do Transformer models outperform linear, tree-based, and recurrent baselines in financial forecasting?\nCan improvements in probabilistic volume and volatility forecasts produce economically meaningful gains in trading and execution?"
-  },
-  {
-    "objectID": "research.html#research-areas",
-    "href": "research.html#research-areas",
-    "title": "Research",
-    "section": "Research Areas",
-    "text": "Research Areas\n\nStatistical learning theory\nNonlinear time-series prediction\nTransformers and attention mechanisms\nProbabilistic forecasting\nIntraday volume and volatility\nQuantitative finance\nComputer vision and semantic segmentation"
+    "section": "2025",
+    "text": "2025\n\nEfficient YOLOv11-AntiUAV Algorithm for Counter-UAV Target Detection\nAdviser: Assoc. Prof. Ying Hou, Xi’an University of Science and Technology · 2025\nDeveloped an efficient YOLOv11-based framework for detecting small and distant UAV targets under class imbalance. Introduced class-weighted loss design and simulated low-light and motion-blur conditions through data augmentation. Evaluated the model using precision, recall, ROC curves, and confusion matrices.\n\n\nLightweight YOLOv11 Network for Multi-Scale Feature Fusion in UAV Small-Object Detection\nAdviser: Assoc. Prof. Ying Hou, Xi’an University of Science and Technology · 2025\nDeveloped lightweight YOLOv11 variants by simplifying the feature-pyramid pathway and replacing standard convolutions with grouped convolutions. Analyzed parameter counts, FLOPs, convergence, and speed-accuracy trade-offs across candidate architectures.\n\n\nMulti-Scale Feature Fusion-Based YOLOv8 Object Detection for UAV Images\nAdviser: Assoc. Prof. Ying Hou, Xi’an University of Science and Technology · 2025\nImproved multi-scale feature extraction and bounding-box regression for dense small-object detection in aerial imagery. Contributed to data preprocessing, annotation, architectural modifications, and ablation studies evaluated using mAP and recall."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Haochen (Jerry) Li",
     "section": "",
-    "text": "I am an M.S. student in Statistical Science at Duke University. Before joining Duke, I studied Computational Finance and Mathematics with Economics at University College London.\nMy research interests lie in the theory and applications of deep learning, with a particular focus on time-series forecasting."
+    "text": "Haochen (Jerry) Li\n\n\nM.S. Student in Stat @ Duke\n\n\nh.li@duke.edu\n\n\n  \n\n\n\n\n\nI am an M.S. student in Statistical Science at Duke University. My research interests lie in the theory and applications of machine learning and deep learning, with a focus on time-series and sequential data.\n\n\n\n\n\nDuke University\n\n\nM.S. in Statistical Science\n\n\nAug. 2026 – May 2028\n\n\n\n\nUniversity College London\n\n\nM.Sc. in Computational Finance, Distinction\n\n\nSep. 2025 – Sep. 2026\n\n\n\n\nUniversity College London\n\n\nB.Sc. in Mathematics with Economics, First-Class Honours\n\n\nSep. 2022 – Jul. 2025\n\n\n\n\n\n\n\nHSBC, London, UK\n\n\nQuantitative Research Intern\n\n\nMay 2026 – Sep. 2026\n\n\n\n\nKPMG, Guangzhou, China\n\n\nStrategy Consulting Intern\n\n\nJun. 2025 – Sep. 2025\n\n\n\n\n\n\n\nWhen Does Softmax Attention Outperform Linear Prediction in Nonlinear Time Series?\n\n\nHaochen Li and Anru Zhang · Manuscript in preparation\n\n\n\n\nResearch on Lightweight Detection Algorithms for Unsafe Passenger Behavior on Escalators\n\n\n2026 9th International Conference on Advanced Electronic Technology, Computers and Software Engineering\n\n\n\n\nIntegrating Convexity and DeepLabv3+ for Semantic Segmentation of Power Lines\n\n\nResearch Square preprint, 2026 · under review\n\n\n\nView all research\n\n\n\n\n\n\nStatistical learning theory\nMachine learning\nDeep learning\nTime-series forecasting\nProbabilistic forecasting\nTransformers and attention\nFlow matching\nGenerative modeling"
   },
   {
-    "objectID": "index.html#selected-research",
-    "href": "index.html#selected-research",
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
     "title": "Haochen (Jerry) Li",
-    "section": "Selected Research",
-    "text": "Selected Research\n\nResearch on Lightweight Detection Algorithms for Unsafe Passenger Behavior on Escalators\nNan Zhang, Ying Hou, Qilun Li, Haochen Li, Wei Zhang, and Chaoyang Sun.\n2026 9th International Conference on Advanced Electronic Technology, Computers and Software Engineering, 2026.\nView on IEEE Xplore\n\n\nIntegrating Convexity and DeepLabv3+ for Semantic Segmentation of Power Lines\nYing Hou, Jindou Tuo, Haochen Li, Zhuoxin Yan, Xuemei Huang, and Yuqi Wang.\nResearch Square Preprint, 2026.\nView Preprint"
+    "section": "",
+    "text": "I am an M.S. student in Statistical Science at Duke University. My research interests lie in the theory and applications of machine learning and deep learning, with a focus on time-series and sequential data."
   },
   {
     "objectID": "index.html#education",
     "href": "index.html#education",
     "title": "Haochen (Jerry) Li",
-    "section": "Education",
-    "text": "Education\nDuke University\nM.S. in Statistical Science\nUniversity College London\nM.Sc. Computational Finance\nUniversity College London\nB.Sc. Mathematics with Economics, First Class Honours\nView all research"
+    "section": "",
+    "text": "Duke University\n\n\nM.S. in Statistical Science\n\n\nAug. 2026 – May 2028\n\n\n\n\nUniversity College London\n\n\nM.Sc. in Computational Finance, Distinction\n\n\nSep. 2025 – Sep. 2026\n\n\n\n\nUniversity College London\n\n\nB.Sc. in Mathematics with Economics, First-Class Honours\n\n\nSep. 2022 – Jul. 2025"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Haochen (Jerry) Li",
+    "section": "",
+    "text": "HSBC, London, UK\n\n\nQuantitative Research Intern\n\n\nMay 2026 – Sep. 2026\n\n\n\n\nKPMG, Guangzhou, China\n\n\nStrategy Consulting Intern\n\n\nJun. 2025 – Sep. 2025"
+  },
+  {
+    "objectID": "index.html#selected-studies",
+    "href": "index.html#selected-studies",
+    "title": "Haochen (Jerry) Li",
+    "section": "",
+    "text": "When Does Softmax Attention Outperform Linear Prediction in Nonlinear Time Series?\n\n\nHaochen Li and Anru Zhang · Manuscript in preparation\n\n\n\n\nResearch on Lightweight Detection Algorithms for Unsafe Passenger Behavior on Escalators\n\n\n2026 9th International Conference on Advanced Electronic Technology, Computers and Software Engineering\n\n\n\n\nIntegrating Convexity and DeepLabv3+ for Semantic Segmentation of Power Lines\n\n\nResearch Square preprint, 2026 · under review\n\n\n\nView all research"
+  },
+  {
+    "objectID": "index.html#research-areas",
+    "href": "index.html#research-areas",
+    "title": "Haochen (Jerry) Li",
+    "section": "",
+    "text": "Statistical learning theory\nMachine learning\nDeep learning\nTime-series forecasting\nProbabilistic forecasting\nTransformers and attention\nFlow matching\nGenerative modeling"
   },
   {
     "objectID": "about.html",
@@ -70,31 +70,115 @@
     "text": "About this site"
   },
   {
+    "objectID": "hobbies.html",
+    "href": "hobbies.html",
+    "title": "Hobbies & Life",
+    "section": "",
+    "text": "Outside research, my interests range from fossils, antiques, and handmade work to cars, cats, cooking, gaming, film and music. My favorite visual motifs include medieval knights, samurai, and cherry blossoms, while black, gold, and yellow are the colors I am most drawn to."
+  },
+  {
+    "objectID": "hobbies.html#collections-handmade-work",
+    "href": "hobbies.html#collections-handmade-work",
+    "title": "Hobbies & Life",
+    "section": "Collections & Handmade Work",
+    "text": "Collections & Handmade Work\nI enjoy collecting objects that carry a visible sense of history, particularly fossils, antiques, and paintings. I also enjoy making things by hand, including rugs and ceramic sculptures. These objects connect history, material, and imagination in ways that I find deeply personal.\n\n\n\n\n\n\nPart of my fossil collection\n\n\n\n\n\n\n\nA painting from my collection\n\n\n\n\n\n\n\n\n\nA rug I made\n\n\n\n\n\n\n\nA ceramic sculpture I made"
+  },
+  {
+    "objectID": "hobbies.html#favorite-motifs",
+    "href": "hobbies.html#favorite-motifs",
+    "title": "Hobbies & Life",
+    "section": "Favorite Motifs",
+    "text": "Favorite Motifs\nI am especially drawn to medieval knights, samurai, and cherry blossoms. I like the contrast between strength and restraint, history and transience. Black, gold, and yellow are the colors I most often use as visual accents.\n\n\n\n\n\n\nKnight display\n\n\n\n\n\n\n\nArmor and historical objects"
+  },
+  {
+    "objectID": "hobbies.html#cars-driving",
+    "href": "hobbies.html#cars-driving",
+    "title": "Hobbies & Life",
+    "section": "Cars & Driving",
+    "text": "Cars & Driving\nCars are where engineering, design, history, and personality come together. Some of my favorites are the Mercedes-AMG W222 S63, Mercedes-AMG GT R, 1987 Porsche 930 Turbo, Nissan 350Z, Chevrolet Corvette C8, and Series 2 Lotus Exige S.\n\n\n\n\n\n\nMercedes-AMG W222 S63\n\n\n\n\n\n\n\nMercedes-AMG GT R\n\n\n\n\n\n\n\n1987 Porsche 930 Turbo\n\n\n\n\n\n\n\n\n\nNissan 350Z\n\n\n\n\n\n\n\nMy Chevrolet Corvette C8\n\n\n\n\n\n\n\nSeries 2 Lotus Exige S"
+  },
+  {
+    "objectID": "hobbies.html#my-cats",
+    "href": "hobbies.html#my-cats",
+    "title": "Hobbies & Life",
+    "section": "My Cats",
+    "text": "My Cats\nI have three cats, each with a very different personality: Huangdou, an orange tabby; Hudou, an American Shorthair; and Xiaopofu, a Ragdoll. Together, they bring warmth, energy, and plenty of unpredictability into everyday life.\n\n\n\n\n\n\nHuangdou — my orange tabby\n\n\n\n\n\n\n\nHuangdou and Hudou together\n\n\n\n\n\n\n\nXiaopofu — my Ragdoll"
+  },
+  {
+    "objectID": "hobbies.html#cooking",
+    "href": "hobbies.html#cooking",
+    "title": "Hobbies & Life",
+    "section": "Cooking",
+    "text": "Cooking\nCooking is one of my favorite ways to relax and experiment. I enjoy learning new techniques, recreating dishes that I have tried elsewhere, and sharing food with friends. It combines creativity with the satisfaction of producing something tangible.\n\n\n\n\n\n\nBraised chicken leg rice bowl\n\n\n\n\n\n\n\nA table of dishes I prepared to share with friends\n\n\n\n\n\n\n\nFuqi feipian I made during my first year at university\n\n\n\n\n\n\n\n\n\nShouzhua bing for breakfast\n\n\n\n\n\n\n\nKorean spicy rice cakes and stir-fried tofu with pork\n\n\n\n\n\n\n\nBraised pig trotters"
+  },
+  {
+    "objectID": "hobbies.html#gaming",
+    "href": "hobbies.html#gaming",
+    "title": "Hobbies & Life",
+    "section": "Gaming",
+    "text": "Gaming\nI enjoy a wide range of video games across most major genres, from competitive shooters and open-world role-playing games to racing, survival horror, strategy, and roguelikes.\n\nCS:GO PUBG Elden Ring Red Dead Redemption 2 The Witcher 3 Cyberpunk 2077 Kingdom Come: Deliverance Baldur’s Gate 3 Forza Horizon 4, 5 & 6 Resident Evil The Binding of Isaac"
+  },
+  {
+    "objectID": "hobbies.html#music",
+    "href": "hobbies.html#music",
+    "title": "Hobbies & Life",
+    "section": "Music",
+    "text": "Music\nMusic is an important part of my daily life. My two favorite singers are The Weeknd and Joker Xue. Their music represents two different styles and emotional worlds that I return to frequently.\n\n\n\n\n\n\nThe Weeknd\n\n\n\n\n\n\n\nJoker Xue"
+  },
+  {
+    "objectID": "hobbies.html#film",
+    "href": "hobbies.html#film",
+    "title": "Hobbies & Life",
+    "section": "Film",
+    "text": "Film\nI enjoy long-running fictional worlds, memorable performances, and films shaped by distinctive directorial styles.\n\nFavorite Series\n\n\nTransformers Detective Conan Fast & Furious Jurassic World Marvel Cinematic Universe\n\n\nFavorite Actors\n\n\nLeonardo DiCaprio Keanu Reeves Andrew Garfield Benedict Cumberbatch Eddie Redmayne Tom Hardy\n\n\nFavorite Directors\n\n\nChristopher Nolan Quentin Tarantino James Wan"
+  },
+  {
+    "objectID": "hobbies.html#other-interests",
+    "href": "hobbies.html#other-interests",
+    "title": "Hobbies & Life",
+    "section": "Other Interests",
+    "text": "Other Interests\nI also enjoy fishing, making and exploring cocktails, billiards, and board games. I like hobbies that combine creativity, patience, strategy, social interaction, and a little unpredictability.\n\n🎣 Fishing 🍸 Cocktails 🎱 Billiards 🎲 Board Games"
+  },
+  {
     "objectID": "projects.html",
     "href": "projects.html",
-    "title": "Projects",
+    "title": "Selected Projects",
     "section": "",
-    "text": "Replication and cross-asset extension of a probabilistic Transformer model for intraday volume forecasting.\nMarkets: U.S. equities and G10 foreign exchange\nMethods: Transformer, Student-t likelihood, multi-step training\nTools: Python, PyTorch, LSEG data"
+    "text": "These projects reflect my work across applied machine learning, mathematics, statistics, data sciene, quantitative finance and economics. My approach is to begin with careful data construction, compare complex methods against credible baselines, preserve realistic time ordering, and connect model outputs to interpretable decisions."
   },
   {
-    "objectID": "projects.html#intraday-volume-estimator",
-    "href": "projects.html#intraday-volume-estimator",
-    "title": "Projects",
-    "section": "",
-    "text": "Replication and cross-asset extension of a probabilistic Transformer model for intraday volume forecasting.\nMarkets: U.S. equities and G10 foreign exchange\nMethods: Transformer, Student-t likelihood, multi-step training\nTools: Python, PyTorch, LSEG data"
+    "objectID": "projects.html#project-hsbc",
+    "href": "projects.html#project-hsbc",
+    "title": "Selected Projects",
+    "section": "01 · Probabilistic Intraday Volume and Volatility Forecasting",
+    "text": "01 · Probabilistic Intraday Volume and Volatility Forecasting\n\nHSBC Quantitative Research · UCL MSc Dissertation · 2026\n\n\nI replicated the Intraday Volume Estimator of Lee and Park (2024) on current U.S. equity data, then extended it across asset classes to G10 foreign exchange and across targets from intraday volume to realized volatility. The objective was not only predictive accuracy, but a probabilistic forecasting system whose information set and execution logic remain valid during the trading day.\n\n\n\nModel and data\n\nTwo-tower encoder–decoder Transformer with Time2Vec embeddings and a Student-t density head.\nTwenty U.S. equities and five G10 FX pairs, with volume and Garman–Klass volatility targets.\nShared evaluation against Linear, XGBoost, RNN, LSTM, BiLSTM, and historical-mean baselines.\n\n\n\nMain findings\n\nIdentified four end-of-day look-ahead inputs and replaced them with information available in real time.\nModel rankings depended on the target: the Transformer was strongest for volatility, while a compact recurrent baseline led equity-volume forecasting.\nThe causal FX schedule achieved 0.33 bp mean absolute VWAP tracking error, compared with 1.31 bp for the historical schedule and 1.66 bp for TWAP.\n\n\n\n\nPyTorch Transformers Probabilistic forecasting Market microstructure G10 FX VWAP execution Time series\n\n\n\n\nMean validation R² across three seeds for twenty U.S. equities.\n\n\n\nObserved and predicted FX log-volume ratios across five currency pairs.\n\n\n\nObserved and predicted log realized volatility across five FX pairs.\n\n\n\nPermutation feature importance for the equity-volatility target.\n\n\n\nModel-implied minute weights and cumulative completion for an equity order.\n\n\n\nFX execution schedules under the model, historical profile, and TWAP."
   },
   {
-    "objectID": "projects.html#nonlinear-time-series-and-attention",
-    "href": "projects.html#nonlinear-time-series-and-attention",
-    "title": "Projects",
-    "section": "Nonlinear Time Series and Attention",
-    "text": "Nonlinear Time Series and Attention\nTheoretical and empirical investigation of the conditions under which softmax attention can outperform linear prediction in nonlinear autoregressive models.\nTopics: approximation error, estimation complexity, attention search cost, statistical crossover thresholds"
+    "objectID": "projects.html#project-crypto-ml",
+    "href": "projects.html#project-crypto-ml",
+    "title": "Selected Projects",
+    "section": "02 · Cryptocurrency Direction Forecasting with Machine Learning",
+    "text": "02 · Cryptocurrency Direction Forecasting with Machine Learning\n\nUCL MSc · Advanced Machine Learning Coursework · 2026\n\n\nThis project compared logistic regression, LSTM, and Transformer models for predicting the direction of hourly BTC and ETH returns. The analysis emphasized chronological evaluation and the question of whether added sequence-model complexity produces stable out-of-sample gains in a low-signal financial setting.\n\n\n\nWorkflow\n\nCleaned and aligned hourly BTCUSDT and ETHUSDT price histories and constructed log returns.\nUsed chronological train, validation, and test partitions to prevent future information from entering model selection.\nCompared a transparent linear classifier with recurrent and attention-based neural networks.\n\n\n\nResults\n\nPredictability was weak overall, with test AUC values close to 0.5.\nFor BTC, the Transformer was marginally strongest (AUC 0.547), followed by LSTM (0.541) and logistic regression (0.532).\nFor ETH, logistic regression performed best (AUC 0.548), while LSTM and Transformer were close to random ranking.\n\n\n\n\nLogistic regression LSTM Transformer BTC ETH ROC–AUC Time-series validation\n\n\n\n\nCleaned hourly prices and log-return distributions for BTC and ETH.\n\n\n\nTest ROC curves for logistic regression, LSTM, and Transformer classifiers."
   },
   {
-    "objectID": "projects.html#statistical-computing",
-    "href": "projects.html#statistical-computing",
-    "title": "Projects",
-    "section": "Statistical Computing",
-    "text": "Statistical Computing\nProjects in statistical modelling, data analysis, SQL, Python, R, and reproducible scientific publishing with Quarto."
+    "objectID": "projects.html#project-trading",
+    "href": "projects.html#project-trading",
+    "title": "Selected Projects",
+    "section": "03 · Algorithmic Trading Strategies for Cryptocurrency Markets",
+    "text": "03 · Algorithmic Trading Strategies for Cryptocurrency Markets\n\nUCL MSc · Algorithmic Trading Coursework · 2026\n\n\nI designed and evaluated two systematic cryptocurrency strategies using Binance one-minute data: a cross-asset mean-reversion strategy and a BNB–DOGE cointegration pairs strategy. The backtest separated signal construction, position sizing, portfolio aggregation, and implementation costs.\n\n\n\nResearch design\n\nBTCUSDT, ETHUSDT, BNBUSDT, and DOGEUSDT observations sampled into 15-minute decision intervals.\nVolatility-targeted position sizing and portfolio-level risk aggregation.\nTransaction-cost estimates derived from the Roll model and incorporated into net performance.\n\n\n\nInterpretation\n\nCompared short-horizon reversal with relative-value convergence as distinct sources of predictability.\nReported gross and net-of-slippage performance instead of relying on frictionless results.\nExamined regime dependence and the sensitivity of short-horizon strategies to execution assumptions.\n\n\n\n\nPython Binance data Mean reversion Cointegration Volatility targeting Backtesting Transaction costs\n\n\n\n\nFifteen-minute long and short signals across the actively traded assets.\n\n\n\nPortfolio value for the mean-reversion and pairs strategies after estimated slippage."
+  },
+  {
+    "objectID": "projects.html#project-recession",
+    "href": "projects.html#project-recession",
+    "title": "Selected Projects",
+    "section": "04 · Probability Calibration in U.S. Recession Forecasting",
+    "text": "04 · Probability Calibration in U.S. Recession Forecasting\n\nUCL MSc · Data Science Coursework · 2026\n\n\nThis project examined whether predicted recession probabilities were empirically reliable, rather than evaluating models only by their ability to rank observations. I forecast U.S. recessions one, two, and three quarters ahead and compared discrimination with probability calibration.\n\n\n\nMethods\n\nSparse L1-regularized logistic regression and tuned XGBoost classifiers.\nPlatt scaling, isotonic regression, and temperature scaling.\nWalk-forward leave-one-split-out calibration preserving chronological order.\n\n\n\nEvaluation\n\nCompared Brier score, log loss, expected calibration error, and AUC.\nCalibration generally improved probability accuracy, although gains could reduce ranking performance.\nPlatt scaling was the most consistent; isotonic regression was more prone to small-sample overfitting.\n\n\n\n\nscikit-learn XGBoost Probability calibration Macroeconomic forecasting Walk-forward validation\n\n\n\n\nReliability diagrams comparing calibration methods across forecast horizons.\n\n\n\nPredicted recession probabilities over time for the linear and XGBoost models."
+  },
+  {
+    "objectID": "projects.html#project-chaos",
+    "href": "projects.html#project-chaos",
+    "title": "Selected Projects",
+    "section": "05 · Chaos and Hopf Bifurcation in a Financial System",
+    "text": "05 · Chaos and Hopf Bifurcation in a Financial System\n\nUCL BSc · Research Project · 2024\n\n\nIn this research project, I reproduced and explored a three-state nonlinear financial system linking the interest rate, investment demand, and price index. I derived the stability conditions and implemented the numerical analysis to study how parameter changes and initial conditions alter the system’s long-run behavior.\n\n\n\\[\n\\dot{x}=z+(y-a)x, \\qquad\n\\dot{y}=1-by-x^2, \\qquad\n\\dot{z}=-x-cz.\n\\]\n\n\n\nAnalysis\n\nDerived equilibrium points and studied local stability through the Jacobian and its eigenvalues.\nSimulated trajectories under alternative saving-rate parameters and initial conditions.\nExamined a delayed-feedback extension for investment demand and the associated Hopf-bifurcation conditions.\n\n\n\nVisualization\n\nProduced three-dimensional trajectories and two-dimensional phase projections.\nUsed parameter sweeps and bifurcation diagrams to identify qualitative regime changes.\nConnected stable equilibria, periodic motion, and chaotic behavior to the model parameters.\n\n\n\n\nPython MATLAB Nonlinear ODEs Dynamical systems Stability analysis Chaos Hopf bifurcation\n\n\n\n\nThree-dimensional trajectory of the nonlinear financial system.\n\n\n\nPhase-plane projections showing the geometry of the simulated trajectory.\n\n\n\nBifurcation diagram illustrating qualitative changes as a parameter varies."
   }
 ]

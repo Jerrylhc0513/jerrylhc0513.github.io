@@ -29,19 +29,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-21b0066232a22e4635635122c0106272.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-8b348f4b4b74a528bf910da1e8c5139e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -88,22 +92,186 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Selected Projects – Haochen (Jerry) Li">
-<meta property="og:description" content="Probabilistic forecasting, machine learning, deep learning and nonlinear dynamics">
-<meta property="og:image" content="https://jerrylhc0513.github.io/fig/projects/hsbc-equity-volatility-feature-importance.png">
+<meta property="og:description" content="Quantitative finance, probabilistic forecasting, machine learning, and nonlinear dynamics">
+<meta property="og:image" content="https://jerrylhc0513.github.io/images/fig/projects/hsbc-equity-volatility-feature-importance.png">
 <meta property="og:site_name" content="Haochen (Jerry) Li">
 <meta property="og:image:alt" content="Equity-volatility feature importance">
+<meta property="og:image:height" content="649">
+<meta property="og:image:width" content="982">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Haochen (Jerry) Li</span>
     </a>
   </div>
@@ -113,15 +281,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./research.html"> 
+    <a class="nav-link" href="../research.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="../projects.qmd"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./hobbies.html"> 
+    <a class="nav-link" href="../hobbies.html"> 
 <span class="menu-text">Hobbies</span></a>
   </li>  
 </ul>
@@ -144,6 +312,7 @@ window.Quarto = {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -168,10 +337,11 @@ window.Quarto = {
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
+
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Selected Projects</h1>
-<p class="subtitle lead">Probabilistic forecasting, machine learning, deep learning and nonlinear dynamics</p>
+<p class="subtitle lead">Quantitative finance, probabilistic forecasting, machine learning, and nonlinear dynamics</p>
 </div>
 
 
@@ -189,131 +359,172 @@ window.Quarto = {
 
 
 <style>
-/* ===================================================================
-   Shared type scale — identical to index.qmd, measured 1:1 from the
-   reference site: base 16px / 25.6px, meta 12.8px / 19.84px,
-   h1 24px, section headings 20px, sub-headings 16px.
-   Cards: radius 8px, no border, shadow 0 2px 4px rgba(0,0,0,.075),
-   padding 24px. Page background #f8f9fa.
-   =================================================================== */
-
-body.quarto-light { background: #f8f9fa; }
-
-/* ===== shared page container — identical on index / research / projects /
-   hobbies, so every page has the same left edge and the same width.
-   1110px centred = the content width of index.qmd's 1140px container. ===== */
-
-#quarto-content main.content {
-  box-sizing: border-box;
-  grid-column: 1 / -1 !important;
-  width: 100%;
-  max-width: 1210px;
-  margin: 24px auto 48px !important;
-  padding: 24px !important;
+:root {
+  --project-navy: #17365d;
+  --project-blue: #315f8c;
+  --project-text: #27313d;
+  --project-muted: #687586;
+  --project-line: #d8e0e8;
+  --project-soft: #f5f7fa;
+  --project-white: #ffffff;
 }
 
-#quarto-content main.content {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075);
+body { color: var(--project-text); background: #ffffff; }
+.page-columns .content { max-width: 1160px; }
+
+/* Larger, restrained Duke-inspired navigation */
+.navbar {
+  min-height: 82px;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 3px solid #012169;
+  box-shadow: 0 2px 10px rgba(20, 39, 69, 0.08);
 }
 
+.navbar-brand {
+  font-size: 1.72rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
 
-#quarto-document-content { color: #27313d; font-size: 16px; line-height: 25.6px; }
+.navbar-nav .nav-link {
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+  font-size: 1.08rem;
+  font-weight: 600;
+}
 
-.quarto-title h1.title { font-size: 24px; font-weight: 700; line-height: 30px; color: #172332; }
-.quarto-title .subtitle { font-size: 16px; line-height: 24.8px; color: #6c757d; }
+.quarto-navbar-tools .quarto-navigation-tool {
+  font-size: 1.28rem;
+}
 
-#quarto-document-content h2 {
-  margin: 34px 0 6px;
-  padding: 0 0 8px 12px;
+.quarto-title {
+  margin-bottom: 1.6rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--project-line);
+}
+
+.quarto-title h1.title {
   color: #172332;
-  border-left: 4px solid #17365d;
-  border-bottom: 1px solid #d8e0e8;
-  font-size: 20px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.55rem, 5vw, 3.55rem);
   font-weight: 700;
-  line-height: 24px;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.035em;
 }
 
-#quarto-document-content h2:first-of-type { margin-top: 8px; }
+.quarto-title .subtitle {
+  color: var(--project-muted);
+  font-size: 1.14rem;
+  line-height: 1.6;
+}
 
 .project-intro {
-  margin: 0 0 28px;
-  padding: 16px 18px;
+  margin: 0 0 2.5rem;
+  padding: 1.55rem 1.7rem;
   color: #334155;
-  background: #f5f7fa;
-  border-left: 4px solid #17365d;
-  border-radius: 4px;
-  font-size: 16px;
-  line-height: 25.6px;
+  background: var(--project-soft);
+  border-left: 4px solid var(--project-navy);
+  border-radius: 3px;
+  font-size: 1.06rem;
+  line-height: 1.75;
+}
+
+h2 {
+  margin-top: 3rem;
+  margin-bottom: 0.45rem;
+  padding: 0;
+  color: #012169;
+  border: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.65rem, 2.8vw, 2.15rem);
+  font-weight: 700;
+  letter-spacing: -0.022em;
+  line-height: 1.24;
 }
 
 .project-meta {
-  margin: 8px 0 12px;
-  color: #315f8c;
-  font-size: 12.8px;
-  font-weight: 700;
-  letter-spacing: 0.045em;
-  line-height: 19.84px;
-  text-transform: uppercase;
+  margin: 0.45rem 0 1.05rem;
+  color: #596474;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.98rem;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
-.project-lead { margin: 12px 0 14px; color: #384454; font-size: 16px; line-height: 25.6px; }
+.project-lead {
+  max-width: 1040px;
+  margin: 0.9rem 0 1.15rem;
+  color: #384454;
+  font-size: 1rem;
+  line-height: 1.75;
+}
 
 .project-summary-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  margin: 14px 0 16px;
+  gap: 1rem;
+  margin: 1rem 0 1.15rem;
 }
 
 .summary-panel {
-  padding: 16px 18px 14px;
-  background: #fff;
-  border: 1px solid #d8e0e8;
-  border-radius: 8px;
+  padding: 1rem 1.1rem 0.9rem;
+  background: #fbfcfd;
+  border: 1px solid var(--project-line);
+  border-radius: 5px;
 }
 
 .summary-panel h3 {
-  margin: 0 0 8px;
-  color: #17365d;
-  font-size: 12.8px;
-  font-weight: 700;
+  margin: 0 0 0.55rem;
+  color: var(--project-navy);
+  font-size: 0.92rem;
+  font-weight: 750;
   letter-spacing: 0.025em;
-  line-height: 19.84px;
   text-transform: uppercase;
 }
 
-.summary-panel ul { margin: 0; padding-left: 20px; color: #465365; font-size: 12.8px; line-height: 19.84px; }
-.summary-panel li + li { margin-top: 5px; }
+.summary-panel ul {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: #465365;
+  font-size: 0.91rem;
+  line-height: 1.62;
+}
 
-.project-tools { margin: 14px 0 18px; line-height: 2; }
+.summary-panel li + li { margin-top: 0.3rem; }
+
+.project-tools { margin: 0.85rem 0 1.25rem; line-height: 2; }
 
 .project-tools code {
-  margin-right: 4px;
-  padding: 4px 8px;
+  margin-right: 0.25rem;
+  padding: 0.28rem 0.48rem;
   color: #304b68;
   background: #eef3f7;
   border: 1px solid #d7e1e9;
-  border-radius: 4px;
+  border-radius: 3px;
   font-family: inherit;
-  font-size: 12.8px;
-  font-weight: 600;
+  font-size: 0.79rem;
+  font-weight: 650;
 }
 
-.figure-note { margin: 12px 0 4px; color: #687586; font-size: 12.8px; line-height: 19.84px; }
+.figure-note { margin: 0.75rem 0 0.2rem; color: var(--project-muted); font-size: 0.82rem; }
 
-.figure-grid { display: grid; gap: 14px; margin: 10px 0 26px; }
+.figure-grid {
+  display: grid;
+  gap: 0.9rem;
+  margin: 0.65rem 0 1.6rem;
+}
+
 .figure-grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .figure-grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
 .figure-item {
   min-width: 0;
-  padding: 9px 9px 8px;
-  background: #fff;
-  border: 1px solid #d8e0e8;
-  border-radius: 8px;
+  padding: 0.55rem 0.55rem 0.5rem;
+  background: var(--project-white);
+  border: 1px solid var(--project-line);
+  border-radius: 5px;
 }
 
 .figure-item > p:first-child { margin: 0; line-height: 0; }
@@ -325,51 +536,50 @@ body.quarto-light { background: #f8f9fa; }
   height: 215px;
   margin: 0 auto;
   object-fit: contain;
-  background: #fff;
+  background: #ffffff;
 }
 
 .figure-item p:last-child {
   min-height: 2.5em;
-  margin: 8px 2px 1px;
+  margin: 0.5rem 0.15rem 0.05rem;
   color: #687586;
-  font-size: 12.8px;
-  line-height: 19.84px;
+  font-size: 0.76rem;
+  line-height: 1.4;
   text-align: center;
 }
 
 .figure-item em { font-style: normal; }
 
 .equation-panel {
-  margin: 18px 0;
-  padding: 8px 16px;
+  margin: 1.1rem 0;
+  padding: 0.45rem 1rem;
   overflow-x: auto;
   background: #f7f9fb;
-  border: 1px solid #d8e0e8;
-  border-left: 4px solid #315f8c;
-  border-radius: 6px;
+  border: 1px solid var(--project-line);
+  border-left: 4px solid var(--project-blue);
+  border-radius: 4px;
 }
 
-hr { margin: 34px 0 0; border: 0; border-top: 1px solid #e1e6ec; }
+hr { margin: 2.8rem 0 0; border: 0; border-top: 1px solid #e1e6ec; }
 
-#TOC { padding-left: 12px; border-left: 1px solid #d8e0e8; }
-#TOC a { color: #536274; font-size: 12.8px; }
-#TOC a:hover, #TOC .active { color: #17365d; }
+#TOC { padding-left: 0.8rem; border-left: 1px solid var(--project-line); }
+#TOC a { color: #536274; font-size: 0.88rem; }
+#TOC a:hover, #TOC .active { color: var(--project-navy); }
 
 @media (max-width: 900px) {
   .figure-grid.cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 680px) {
-  main#quarto-document-content { padding: 18px 16px 16px; }
   .project-summary-grid,
   .figure-grid.cols-2,
   .figure-grid.cols-3 { grid-template-columns: 1fr; }
   .figure-item img { height: auto; max-height: 260px; }
-  #quarto-document-content h2 { margin-top: 26px; font-size: 18px; }
+  h2 { margin-top: 2.3rem; font-size: 1.32rem; }
 }
 </style>
 <div class="project-intro">
-<p>These projects reflect my work across applied machine learning, mathematics, statistics, data sciene, quantitative finance and economics. My approach is to begin with careful data construction, compare complex methods against credible baselines, preserve realistic time ordering, and connect model outputs to interpretable decisions.</p>
+<p>These projects reflect my work across quantitative finance, statistical learning, and applied machine learning. My approach is to begin with careful data construction, compare complex methods against credible baselines, preserve realistic time ordering, and connect model outputs to interpretable decisions.</p>
 </div>
 <section id="project-hsbc" class="level2">
 <h2 class="anchored" data-anchor-id="project-hsbc">01 · Probabilistic Intraday Volume and Volatility Forecasting</h2>
@@ -399,6 +609,9 @@ hr { margin: 34px 0 0; border: 0; border-top: 1px solid #e1e6ec; }
 </div>
 <div class="project-tools">
 <p><code>PyTorch</code> <code>Transformers</code> <code>Probabilistic forecasting</code> <code>Market microstructure</code> <code>G10 FX</code> <code>VWAP execution</code> <code>Time series</code></p>
+</div>
+<div class="figure-note">
+<p>Click any figure to open the full-resolution version.</p>
 </div>
 <div class="figure-grid cols-3">
 <div class="figure-item">
@@ -608,6 +821,19 @@ hr { margin: 34px 0 0; border: 0; border-top: 1px solid #e1e6ec; }
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {

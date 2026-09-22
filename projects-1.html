@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Publications and ongoing research by Haochen (Jerry) Li in deep learning, time-series forecasting, attention mechanisms, flow matching, and generative models.">
 
-<title>Research – Haochen (Jerry) Li</title>
+<title>Selected Projects – Haochen (Jerry) Li</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -42,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-21b0066232a22e4635635122c0106272.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -59,11 +58,42 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Research – Haochen (Jerry) Li">
-<meta property="og:description" content="Publications and ongoing research by Haochen (Jerry) Li in deep learning, time-series forecasting, attention mechanisms, flow matching, and generative models.">
+<meta property="og:title" content="Selected Projects – Haochen (Jerry) Li">
+<meta property="og:description" content="Probabilistic forecasting, machine learning, deep learning and nonlinear dynamics">
+<meta property="og:image" content="https://jerrylhc0513.github.io/fig/projects/hsbc-equity-volatility-feature-importance.png">
 <meta property="og:site_name" content="Haochen (Jerry) Li">
+<meta property="og:image:alt" content="Equity-volatility feature importance">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -83,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./research.html" aria-current="page"> 
+    <a class="nav-link" href="./research.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
@@ -122,43 +152,19 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">2026</a>
-  <ul class="collapse">
-  <li><a href="#research-on-lightweight-detection-algorithms-for-unsafe-passenger-behavior-on-escalators" id="toc-research-on-lightweight-detection-algorithms-for-unsafe-passenger-behavior-on-escalators" class="nav-link" data-scroll-target="#research-on-lightweight-detection-algorithms-for-unsafe-passenger-behavior-on-escalators">Research on Lightweight Detection Algorithms for Unsafe Passenger Behavior on Escalators</a></li>
-  <li><a href="#integrating-convexity-and-deeplabv3-for-semantic-segmentation-of-power-lines" id="toc-integrating-convexity-and-deeplabv3-for-semantic-segmentation-of-power-lines" class="nav-link" data-scroll-target="#integrating-convexity-and-deeplabv3-for-semantic-segmentation-of-power-lines">Integrating Convexity and DeepLabv3+ for Semantic Segmentation of Power Lines</a></li>
-  <li><a href="#when-does-softmax-attention-outperform-linear-prediction-in-nonlinear-time-series" id="toc-when-does-softmax-attention-outperform-linear-prediction-in-nonlinear-time-series" class="nav-link" data-scroll-target="#when-does-softmax-attention-outperform-linear-prediction-in-nonlinear-time-series">When Does Softmax Attention Outperform Linear Prediction in Nonlinear Time Series?</a></li>
-  <li><a href="#replication-and-cross-asset-extension-of-the-intraday-volume-estimator" id="toc-replication-and-cross-asset-extension-of-the-intraday-volume-estimator" class="nav-link" data-scroll-target="#replication-and-cross-asset-extension-of-the-intraday-volume-estimator">Replication and Cross-Asset Extension of the Intraday Volume Estimator</a></li>
-  </ul></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2025</a>
-  <ul class="collapse">
-  <li><a href="#efficient-yolov11-antiuav-algorithm-for-counter-uav-target-detection" id="toc-efficient-yolov11-antiuav-algorithm-for-counter-uav-target-detection" class="nav-link" data-scroll-target="#efficient-yolov11-antiuav-algorithm-for-counter-uav-target-detection">Efficient YOLOv11-AntiUAV Algorithm for Counter-UAV Target Detection</a></li>
-  <li><a href="#lightweight-yolov11-network-for-multi-scale-feature-fusion-in-uav-small-object-detection" id="toc-lightweight-yolov11-network-for-multi-scale-feature-fusion-in-uav-small-object-detection" class="nav-link" data-scroll-target="#lightweight-yolov11-network-for-multi-scale-feature-fusion-in-uav-small-object-detection">Lightweight YOLOv11 Network for Multi-Scale Feature Fusion in UAV Small-Object Detection</a></li>
-  <li><a href="#multi-scale-feature-fusion-based-yolov8-object-detection-for-uav-images" id="toc-multi-scale-feature-fusion-based-yolov8-object-detection-for-uav-images" class="nav-link" data-scroll-target="#multi-scale-feature-fusion-based-yolov8-object-detection-for-uav-images">Multi-Scale Feature Fusion-Based YOLOv8 Object Detection for UAV Images</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Research</h1>
-</div>
-
-<div>
-  <div class="description">
-    Publications and ongoing research by Haochen (Jerry) Li in deep learning, time-series forecasting, attention mechanisms, flow matching, and generative models.
-  </div>
+<h1 class="title">Selected Projects</h1>
+<p class="subtitle lead">Probabilistic forecasting, machine learning, deep learning and nonlinear dynamics</p>
 </div>
 
 
-<div class="quarto-title-meta column-page-left">
+
+<div class="quarto-title-meta column-page">
 
     
   
@@ -172,9 +178,11 @@ ul.task-list li input[type="checkbox"] {
 
 <style>
 /* ===================================================================
-   Measured 1:1 from the reference publications page:
-   year heading 18.4px/700 · paper title 16.8px/400 ·
-   authors, venue, abstract, links all 12.8px/19.84px
+   Shared type scale — identical to index.qmd, measured 1:1 from the
+   reference site: base 16px / 25.6px, meta 12.8px / 19.84px,
+   h1 24px, section headings 20px, sub-headings 16px.
+   Cards: radius 8px, no border, shadow 0 2px 4px rgba(0,0,0,.075),
+   padding 24px. Page background #f8f9fa.
    =================================================================== */
 
 body.quarto-light { background: #f8f9fa; }
@@ -182,12 +190,13 @@ body.quarto-light { background: #f8f9fa; }
 /* ===== shared page container — identical on index / research / projects /
    hobbies, so every page has the same left edge and the same width.
    1110px centred = the content width of index.qmd's 1140px container. ===== */
+#quarto-margin-sidebar { display: none !important; }
 
 #quarto-content main.content {
   box-sizing: border-box;
   grid-column: 1 / -1 !important;
   width: 100%;
-  max-width: 1210px;
+  max-width: 1370px;
   margin: 24px auto 48px !important;
   padding: 24px !important;
 }
@@ -199,110 +208,390 @@ body.quarto-light { background: #f8f9fa; }
 }
 
 
-#quarto-document-content { font-size: 16px; line-height: 25.6px; }
+#quarto-document-content { color: #27313d; font-size: 16px; line-height: 25.6px; }
 
-.quarto-title h1.title { font-size: 24px; font-weight: 700; line-height: 30px; }
+.quarto-title h1.title { font-size: 24px; font-weight: 700; line-height: 30px; color: #172332; }
 .quarto-title .subtitle { font-size: 16px; line-height: 24.8px; color: #6c757d; }
 
-/* ---- year heading ---- */
 #quarto-document-content h2 {
-  margin: 26px 0 4px;
-  padding: 0;
-  border: 0;
-  font-size: 18.4px;
+  margin: 34px 0 6px;
+  padding: 0 0 8px 12px;
+  color: #172332;
+  border-left: 4px solid #17365d;
+  border-bottom: 1px solid #d8e0e8;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 22.08px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
 }
 
-#quarto-document-content section.level2:first-of-type > h2 { margin-top: 14px; }
+#quarto-document-content h2:first-of-type { margin-top: 8px; }
 
-/* ---- one entry ---- */
-#quarto-document-content section.level3 {
-  margin-top: 14px;
-  padding-top: 14px;
-  border-top: 1px solid #e9ecef;
+.project-intro {
+  margin: 0 0 28px;
+  padding: 16px 18px;
+  color: #334155;
+  background: #f5f7fa;
+  border-left: 4px solid #17365d;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 25.6px;
 }
 
-#quarto-document-content section.level2 > section.level3:first-of-type {
-  margin-top: 10px;
-  padding-top: 10px;
+.project-meta {
+  margin: 8px 0 12px;
+  color: #315f8c;
+  font-size: 12.8px;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  line-height: 19.84px;
+  text-transform: uppercase;
 }
 
-#quarto-document-content h3 {
-  margin: 0 0 4px;
-  font-size: 16.8px;
-  font-weight: 400;
-  line-height: 23.52px;
-  color: #000;
+.project-lead { margin: 12px 0 14px; color: #384454; font-size: 16px; line-height: 25.6px; }
+
+.project-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 14px 0 16px;
 }
 
-/* everything inside an entry is 12.8px */
-#quarto-document-content section.level3 p {
-  margin: 0 0 3px;
-  color: #6c757d;
+.summary-panel {
+  padding: 16px 18px 14px;
+  background: #fff;
+  border: 1px solid #d8e0e8;
+  border-radius: 8px;
+}
+
+.summary-panel h3 {
+  margin: 0 0 8px;
+  color: #17365d;
+  font-size: 12.8px;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  line-height: 19.84px;
+  text-transform: uppercase;
+}
+
+.summary-panel ul { margin: 0; padding-left: 20px; color: #465365; font-size: 12.8px; line-height: 19.84px; }
+.summary-panel li + li { margin-top: 5px; }
+
+.project-tools { margin: 14px 0 18px; line-height: 2; }
+
+.project-tools code {
+  margin-right: 4px;
+  padding: 4px 8px;
+  color: #304b68;
+  background: #eef3f7;
+  border: 1px solid #d7e1e9;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 12.8px;
+  font-weight: 600;
+}
+
+.figure-note { margin: 12px 0 4px; color: #687586; font-size: 12.8px; line-height: 19.84px; }
+
+.figure-grid { display: grid; gap: 14px; margin: 10px 0 26px; }
+.figure-grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.figure-grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.figure-item {
+  min-width: 0;
+  padding: 9px 9px 8px;
+  background: #fff;
+  border: 1px solid #d8e0e8;
+  border-radius: 8px;
+}
+
+.figure-item > p:first-child { margin: 0; line-height: 0; }
+.figure-item a { display: block; text-decoration: none; }
+
+.figure-item img {
+  display: block;
+  width: 100%;
+  height: 215px;
+  margin: 0 auto;
+  object-fit: contain;
+  background: #fff;
+}
+
+.figure-item p:last-child {
+  min-height: 2.5em;
+  margin: 8px 2px 1px;
+  color: #687586;
   font-size: 12.8px;
   line-height: 19.84px;
+  text-align: center;
 }
 
-/* author line stays dark */
-#quarto-document-content section.level3 p:first-of-type { color: #212529; }
+.figure-item em { font-style: normal; }
 
-/* venue / status lines stay dark and italic */
-#quarto-document-content section.level3 p:has(> em) { color: #212529; }
+.equation-panel {
+  margin: 18px 0;
+  padding: 8px 16px;
+  overflow-x: auto;
+  background: #f7f9fb;
+  border: 1px solid #d8e0e8;
+  border-left: 4px solid #315f8c;
+  border-radius: 6px;
+}
 
-/* intro paragraph above the years */
-#quarto-document-content > p,
-#quarto-document-content > section.level1 > p { font-size: 16px; line-height: 25.6px; }
+hr { margin: 34px 0 0; border: 0; border-top: 1px solid #e1e6ec; }
+
+#TOC { padding-left: 12px; border-left: 1px solid #d8e0e8; }
+#TOC a { color: #536274; font-size: 12.8px; }
+#TOC a:hover, #TOC .active { color: #17365d; }
+
+@media (max-width: 900px) {
+  .figure-grid.cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 680px) {
+  main#quarto-document-content { padding: 18px 16px 16px; }
+  .project-summary-grid,
+  .figure-grid.cols-2,
+  .figure-grid.cols-3 { grid-template-columns: 1fr; }
+  .figure-item img { height: auto; max-height: 260px; }
+  #quarto-document-content h2 { margin-top: 26px; font-size: 18px; }
+}
 </style>
-<p>My research interests lie in the theoretical foundations and practical applications of machine learning and deep learning.</p>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">2026</h2>
-<section id="research-on-lightweight-detection-algorithms-for-unsafe-passenger-behavior-on-escalators" class="level3">
-<h3 class="anchored" data-anchor-id="research-on-lightweight-detection-algorithms-for-unsafe-passenger-behavior-on-escalators">Research on Lightweight Detection Algorithms for Unsafe Passenger Behavior on Escalators</h3>
-<p>Nan Zhang, Ying Hou, Qilun Li, <strong>Haochen Li</strong>, Wei Zhang, and Chaoyang Sun.</p>
-<p><em>2026 9th International Conference on Advanced Electronic Technology, Computers and Software Engineering</em>, 2026.</p>
-<p>This work studies lightweight deep-learning algorithms for detecting unsafe passenger behaviour in escalator environments. It focuses on balancing detection accuracy, computational efficiency, and deployment feasibility in resource-constrained settings.</p>
-<p><a href="https://ieeexplore.ieee.org/abstract/document/11504053/">IEEE Xplore</a></p>
+<div class="project-intro">
+<p>These projects reflect my work across applied machine learning, mathematics, statistics, data sciene, quantitative finance and economics. My approach is to begin with careful data construction, compare complex methods against credible baselines, preserve realistic time ordering, and connect model outputs to interpretable decisions.</p>
+</div>
+<section id="project-hsbc" class="level2">
+<h2 class="anchored" data-anchor-id="project-hsbc">01 · Probabilistic Intraday Volume and Volatility Forecasting</h2>
+<div class="project-meta">
+<p>HSBC Quantitative Research · UCL MSc Dissertation · 2026</p>
+</div>
+<div class="project-lead">
+<p>I replicated the Intraday Volume Estimator of Lee and Park (2024) on current U.S. equity data, then extended it across asset classes to G10 foreign exchange and across targets from intraday volume to realized volatility. The objective was not only predictive accuracy, but a probabilistic forecasting system whose information set and execution logic remain valid during the trading day.</p>
+</div>
+<div class="project-summary-grid">
+<section id="model-and-data" class="level3 summary-panel">
+<h3 class="anchored" data-anchor-id="model-and-data">Model and data</h3>
+<ul>
+<li>Two-tower encoder–decoder Transformer with Time2Vec embeddings and a Student-t density head.</li>
+<li>Twenty U.S. equities and five G10 FX pairs, with volume and Garman–Klass volatility targets.</li>
+<li>Shared evaluation against Linear, XGBoost, RNN, LSTM, BiLSTM, and historical-mean baselines.</li>
+</ul>
 </section>
-<section id="integrating-convexity-and-deeplabv3-for-semantic-segmentation-of-power-lines" class="level3">
-<h3 class="anchored" data-anchor-id="integrating-convexity-and-deeplabv3-for-semantic-segmentation-of-power-lines">Integrating Convexity and DeepLabv3+ for Semantic Segmentation of Power Lines</h3>
-<p>Ying Hou, Jindou Tuo, <strong>Haochen Li</strong>, Zhuoxin Yan, Xuemei Huang, and Yuqi Wang.</p>
-<p><em>Research Square Preprint</em>, 2026.</p>
-<p>This paper proposes PLE-DeepLabv3+, a lightweight semantic-segmentation model for detecting thin and low-contrast power lines in complex aerial imagery. The model combines a reconfigured ConvNeXtV2 backbone, direction-selective coordinate attention, efficient multi-scale feature fusion, adaptive edge detection, and a class-aware focal loss.</p>
-<p><a href="https://doi.org/10.21203/rs.3.rs-8607246/v1">Preprint</a> | <a href="https://doi.org/10.21203/rs.3.rs-8607246/v1">DOI</a></p>
+<section id="main-findings" class="level3 summary-panel">
+<h3 class="anchored" data-anchor-id="main-findings">Main findings</h3>
+<ul>
+<li>Identified four end-of-day look-ahead inputs and replaced them with information available in real time.</li>
+<li>Model rankings depended on the target: the Transformer was strongest for volatility, while a compact recurrent baseline led equity-volume forecasting.</li>
+<li>The causal FX schedule achieved 0.33 bp mean absolute VWAP tracking error, compared with 1.31 bp for the historical schedule and 1.66 bp for TWAP.</li>
+</ul>
 </section>
-<section id="when-does-softmax-attention-outperform-linear-prediction-in-nonlinear-time-series" class="level3">
-<h3 class="anchored" data-anchor-id="when-does-softmax-attention-outperform-linear-prediction-in-nonlinear-time-series">When Does Softmax Attention Outperform Linear Prediction in Nonlinear Time Series?</h3>
-<p><strong>Haochen Li</strong>, Anru Zhang.</p>
-<p><em>Manuscript in preparation for submission.</em></p>
-<p>This work studies when softmax attention can outperform linear prediction in nonlinear time series. It develops a statistical framework that balances the approximation gains of nonlinear attention against the additional costs of model selection and estimation. The theoretical results are accompanied by simulation studies across different signal, noise, and sample-size regimes.</p>
+</div>
+<div class="project-tools">
+<p><code>PyTorch</code> <code>Transformers</code> <code>Probabilistic forecasting</code> <code>Market microstructure</code> <code>G10 FX</code> <code>VWAP execution</code> <code>Time series</code></p>
+</div>
+<div class="figure-grid cols-3">
+<div class="figure-item">
+<p><a href="fig/projects/hsbc-equity-r2-by-stock.png"><img src="fig/projects/hsbc-equity-r2-by-stock.png" class="img-fluid" alt="Mean validation R-squared by equity"></a></p>
+<p><em>Mean validation R² across three seeds for twenty U.S. equities.</em></p>
+</div>
+<div class="figure-item">
+<p><a href="fig/projects/hsbc-fx-volume-forecast.png"><img src="fig/projects/hsbc-fx-volume-forecast.png" class="img-fluid" alt="FX log-volume predictions"></a></p>
+<p><em>Observed and predicted FX log-volume ratios across five currency pairs.</em></p>
+</div>
+<div class="figure-item">
+<p><a href="fig/projects/hsbc-fx-volatility-forecast.png"><img src="fig/projects/hsbc-fx-volatility-forecast.png" class="img-fluid" alt="FX log-volatility predictions"></a></p>
+<p><em>Observed and predicted log realized volatility across five FX pairs.</em></p>
+</div>
+<div class="figure-item">
+<p><a href="fig/projects/hsbc-equity-volatility-feature-importance.png"><img src="fig/projects/hsbc-equity-volatility-feature-importance.png" class="img-fluid" alt="Equity-volatility feature importance"></a></p>
+<p><em>Permutation feature importance for the equity-volatility target.</em></p>
+</div>
+<div class="figure-item">
+<p><a href="fig/projects/hsbc-equity-execution.png"><img src="fig/projects/hsbc-equity-execution.png" class="img-fluid" alt="Equity execution example"></a></p>
+<p><em>Model-implied minute weights and cumulative completion for an equity order.</em></p>
+</div>
+<div class="figure-item">
+<p><a href="fig/projects/hsbc-fx-execution.png"><img src="fig/projects/hsbc-fx-execution.png" class="img-fluid" alt="FX execution example"></a></p>
+<p><em>FX execution schedules under the model, historical profile, and TWAP.</em></p>
+</div>
+</div>
+<hr>
 </section>
-<section id="replication-and-cross-asset-extension-of-the-intraday-volume-estimator" class="level3">
-<h3 class="anchored" data-anchor-id="replication-and-cross-asset-extension-of-the-intraday-volume-estimator">Replication and Cross-Asset Extension of the Intraday Volume Estimator</h3>
-<p><strong>Haochen Li</strong>, Anru Zhang.</p>
-<p><em>Manuscript completed.</em></p>
-<p>This work replicates and extends a Transformer-based probabilistic forecasting framework for intraday sequential data. It examines the model across multiple asset classes and forecast targets, including volume and realized volatility. The analysis considers robustness, causal deployment, and the effect of predictive improvements on downstream decision-making.</p>
+<section id="project-crypto-ml" class="level2">
+<h2 class="anchored" data-anchor-id="project-crypto-ml">02 · Cryptocurrency Direction Forecasting with Machine Learning</h2>
+<div class="project-meta">
+<p>UCL MSc · Advanced Machine Learning Coursework · 2026</p>
+</div>
+<div class="project-lead">
+<p>This project compared logistic regression, LSTM, and Transformer models for predicting the direction of hourly BTC and ETH returns. The analysis emphasized chronological evaluation and the question of whether added sequence-model complexity produces stable out-of-sample gains in a low-signal financial setting.</p>
+</div>
+<div class="project-summary-grid">
+<section id="workflow" class="level3 summary-panel">
+<h3 class="anchored" data-anchor-id="workflow">Workflow</h3>
+<ul>
+<li>Cleaned and aligned hourly BTCUSDT and ETHUSDT price histories and constructed log returns.</li>
+<li>Used chronological train, validation, and test partitions to prevent future information from entering model selection.</li>
+<li>Compared a transparent linear classifier with recurrent and attention-based neural networks.</li>
+</ul>
 </section>
+<section id="results" class="level3 summary-panel">
+<h3 class="anchored" data-anchor-id="results">Results</h3>
+<ul>
+<li>Predictability was weak overall, with test AUC values close to 0.5.</li>
+<li>For BTC, the Transformer was marginally strongest (AUC 0.547), followed by LSTM (0.541) and logistic regression (0.532).</li>
+<li>For ETH, logistic regression performed best (AUC 0.548), while LSTM and Transformer were close to random ranking.</li>
+</ul>
 </section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1">2025</h2>
-<section id="efficient-yolov11-antiuav-algorithm-for-counter-uav-target-detection" class="level3">
-<h3 class="anchored" data-anchor-id="efficient-yolov11-antiuav-algorithm-for-counter-uav-target-detection">Efficient YOLOv11-AntiUAV Algorithm for Counter-UAV Target Detection</h3>
-<p>Adviser: Assoc. Prof.&nbsp;Ying Hou, Xi’an University of Science and Technology · 2025</p>
-<p>Developed an efficient YOLOv11-based framework for detecting small and distant UAV targets under class imbalance. Introduced class-weighted loss design and simulated low-light and motion-blur conditions through data augmentation. Evaluated the model using precision, recall, ROC curves, and confusion matrices.</p>
+</div>
+<div class="project-tools">
+<p><code>Logistic regression</code> <code>LSTM</code> <code>Transformer</code> <code>BTC</code> <code>ETH</code> <code>ROC–AUC</code> <code>Time-series validation</code></p>
+</div>
+<div class="figure-grid cols-2">
+<div class="figure-item">
+<p><a href="fig/projects/crypto-direction-eda.png"><img src="fig/projects/crypto-direction-eda.png" class="img-fluid" alt="BTC and ETH exploratory data analysis"></a></p>
+<p><em>Cleaned hourly prices and log-return distributions for BTC and ETH.</em></p>
+</div>
+<div class="figure-item">
+<p><a href="fig/projects/crypto-direction-roc.png"><img src="fig/projects/crypto-direction-roc.png" class="img-fluid" alt="BTC and ETH ROC curves"></a></p>
+<p><em>Test ROC curves for logistic regression, LSTM, and Transformer classifiers.</em></p>
+</div>
+</div>
+<hr>
 </section>
-<section id="lightweight-yolov11-network-for-multi-scale-feature-fusion-in-uav-small-object-detection" class="level3">
-<h3 class="anchored" data-anchor-id="lightweight-yolov11-network-for-multi-scale-feature-fusion-in-uav-small-object-detection">Lightweight YOLOv11 Network for Multi-Scale Feature Fusion in UAV Small-Object Detection</h3>
-<p>Adviser: Assoc. Prof.&nbsp;Ying Hou, Xi’an University of Science and Technology · 2025</p>
-<p>Developed lightweight YOLOv11 variants by simplifying the feature-pyramid pathway and replacing standard convolutions with grouped convolutions. Analyzed parameter counts, FLOPs, convergence, and speed-accuracy trade-offs across candidate architectures.</p>
+<section id="project-trading" class="level2">
+<h2 class="anchored" data-anchor-id="project-trading">03 · Algorithmic Trading Strategies for Cryptocurrency Markets</h2>
+<div class="project-meta">
+<p>UCL MSc · Algorithmic Trading Coursework · 2026</p>
+</div>
+<div class="project-lead">
+<p>I designed and evaluated two systematic cryptocurrency strategies using Binance one-minute data: a cross-asset mean-reversion strategy and a BNB–DOGE cointegration pairs strategy. The backtest separated signal construction, position sizing, portfolio aggregation, and implementation costs.</p>
+</div>
+<div class="project-summary-grid">
+<section id="research-design" class="level3 summary-panel">
+<h3 class="anchored" data-anchor-id="research-design">Research design</h3>
+<ul>
+<li>BTCUSDT, ETHUSDT, BNBUSDT, and DOGEUSDT observations sampled into 15-minute decision intervals.</li>
+<li>Volatility-targeted position sizing and portfolio-level risk aggregation.</li>
+<li>Transaction-cost estimates derived from the Roll model and incorporated into net performance.</li>
+</ul>
 </section>
-<section id="multi-scale-feature-fusion-based-yolov8-object-detection-for-uav-images" class="level3">
-<h3 class="anchored" data-anchor-id="multi-scale-feature-fusion-based-yolov8-object-detection-for-uav-images">Multi-Scale Feature Fusion-Based YOLOv8 Object Detection for UAV Images</h3>
-<p>Adviser: Assoc. Prof.&nbsp;Ying Hou, Xi’an University of Science and Technology · 2025</p>
-<p>Improved multi-scale feature extraction and bounding-box regression for dense small-object detection in aerial imagery. Contributed to data preprocessing, annotation, architectural modifications, and ablation studies evaluated using mAP and recall.</p>
+<section id="interpretation" class="level3 summary-panel">
+<h3 class="anchored" data-anchor-id="interpretation">Interpretation</h3>
+<ul>
+<li>Compared short-horizon reversal with relative-value convergence as distinct sources of predictability.</li>
+<li>Reported gross and net-of-slippage performance instead of relying on frictionless results.</li>
+<li>Examined regime dependence and the sensitivity of short-horizon strategies to execution assumptions.</li>
+</ul>
+</section>
+</div>
+<div class="project-tools">
+<p><code>Python</code> <code>Binance data</code> <code>Mean reversion</code> <code>Cointegration</code> <code>Volatility targeting</code> <code>Backtesting</code> <code>Transaction costs</code></p>
+</div>
+<div class="figure-grid cols-2">
+<div class="figure-item">
+<p><a href="fig/projects/crypto-mean-reversion-signals.png"><img src="fig/projects/crypto-mean-reversion-signals.png" class="img-fluid" alt="Cryptocurrency mean-reversion signals"></a></p>
+<p><em>Fifteen-minute long and short signals across the actively traded assets.</em></p>
+</div>
+<div class="figure-item">
+<p><a href="fig/projects/crypto-strategy-backtest.png"><img src="fig/projects/crypto-strategy-backtest.png" class="img-fluid" alt="Cryptocurrency strategy backtests"></a></p>
+<p><em>Portfolio value for the mean-reversion and pairs strategies after estimated slippage.</em></p>
+</div>
+</div>
+<hr>
+</section>
+<section id="project-recession" class="level2">
+<h2 class="anchored" data-anchor-id="project-recession">04 · Probability Calibration in U.S. Recession Forecasting</h2>
+<div class="project-meta">
+<p>UCL MSc · Data Science Coursework · 2026</p>
+</div>
+<div class="project-lead">
+<p>This project examined whether predicted recession probabilities were empirically reliable, rather than evaluating models only by their ability to rank observations. I forecast U.S. recessions one, two, and three quarters ahead and compared discrimination with probability calibration.</p>
+</div>
+<div class="project-summary-grid">
+<section id="methods" class="level3 summary-panel">
+<h3 class="anchored" data-anchor-id="methods">Methods</h3>
+<ul>
+<li>Sparse L1-regularized logistic regression and tuned XGBoost classifiers.</li>
+<li>Platt scaling, isotonic regression, and temperature scaling.</li>
+<li>Walk-forward leave-one-split-out calibration preserving chronological order.</li>
+</ul>
+</section>
+<section id="evaluation" class="level3 summary-panel">
+<h3 class="anchored" data-anchor-id="evaluation">Evaluation</h3>
+<ul>
+<li>Compared Brier score, log loss, expected calibration error, and AUC.</li>
+<li>Calibration generally improved probability accuracy, although gains could reduce ranking performance.</li>
+<li>Platt scaling was the most consistent; isotonic regression was more prone to small-sample overfitting.</li>
+</ul>
+</section>
+</div>
+<div class="project-tools">
+<p><code>scikit-learn</code> <code>XGBoost</code> <code>Probability calibration</code> <code>Macroeconomic forecasting</code> <code>Walk-forward validation</code></p>
+</div>
+<div class="figure-grid cols-2">
+<div class="figure-item">
+<p><a href="fig/projects/recession-calibration-comparison.png"><img src="fig/projects/recession-calibration-comparison.png" class="img-fluid" alt="Recession reliability diagrams"></a></p>
+<p><em>Reliability diagrams comparing calibration methods across forecast horizons.</em></p>
+</div>
+<div class="figure-item">
+<p><a href="fig/projects/recession-probability-paths.png"><img src="fig/projects/recession-probability-paths.png" class="img-fluid" alt="Predicted recession probability paths"></a></p>
+<p><em>Predicted recession probabilities over time for the linear and XGBoost models.</em></p>
+</div>
+</div>
+<hr>
+</section>
+<section id="project-chaos" class="level2">
+<h2 class="anchored" data-anchor-id="project-chaos">05 · Chaos and Hopf Bifurcation in a Financial System</h2>
+<div class="project-meta">
+<p>UCL BSc · Research Project · 2024</p>
+</div>
+<div class="project-lead">
+<p>In this research project, I reproduced and explored a three-state nonlinear financial system linking the interest rate, investment demand, and price index. I derived the stability conditions and implemented the numerical analysis to study how parameter changes and initial conditions alter the system’s long-run behavior.</p>
+</div>
+<div class="equation-panel">
+<p><span class="math display">\[
+\dot{x}=z+(y-a)x, \qquad
+\dot{y}=1-by-x^2, \qquad
+\dot{z}=-x-cz.
+\]</span></p>
+</div>
+<div class="project-summary-grid">
+<section id="analysis" class="level3 summary-panel">
+<h3 class="anchored" data-anchor-id="analysis">Analysis</h3>
+<ul>
+<li>Derived equilibrium points and studied local stability through the Jacobian and its eigenvalues.</li>
+<li>Simulated trajectories under alternative saving-rate parameters and initial conditions.</li>
+<li>Examined a delayed-feedback extension for investment demand and the associated Hopf-bifurcation conditions.</li>
+</ul>
+</section>
+<section id="visualization" class="level3 summary-panel">
+<h3 class="anchored" data-anchor-id="visualization">Visualization</h3>
+<ul>
+<li>Produced three-dimensional trajectories and two-dimensional phase projections.</li>
+<li>Used parameter sweeps and bifurcation diagrams to identify qualitative regime changes.</li>
+<li>Connected stable equilibria, periodic motion, and chaotic behavior to the model parameters.</li>
+</ul>
+</section>
+</div>
+<div class="project-tools">
+<p><code>Python</code> <code>MATLAB</code> <code>Nonlinear ODEs</code> <code>Dynamical systems</code> <code>Stability analysis</code> <code>Chaos</code> <code>Hopf bifurcation</code></p>
+</div>
+<div class="figure-grid cols-3">
+<div class="figure-item">
+<p><a href="fig/projects/financial-chaos-attractor.jpg"><img src="fig/projects/financial-chaos-attractor.jpg" class="img-fluid" alt="Three-dimensional financial-system trajectory"></a></p>
+<p><em>Three-dimensional trajectory of the nonlinear financial system.</em></p>
+</div>
+<div class="figure-item">
+<p><a href="fig/projects/financial-chaos-phase-plots.jpg"><img src="fig/projects/financial-chaos-phase-plots.jpg" class="img-fluid" alt="Financial-system phase projections"></a></p>
+<p><em>Phase-plane projections showing the geometry of the simulated trajectory.</em></p>
+</div>
+<div class="figure-item">
+<p><a href="fig/projects/financial-chaos-bifurcation.jpg"><img src="fig/projects/financial-chaos-bifurcation.jpg" class="img-fluid" alt="Financial-system bifurcation diagram"></a></p>
+<p><em>Bifurcation diagram illustrating qualitative changes as a parameter varies.</em></p>
+</div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

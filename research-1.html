@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Publications and ongoing research by Haochen (Jerry) Li in deep learning, time-series forecasting, attention mechanisms, flow matching, and generative models.">
 
-<title>About – Haochen (Jerry) Li</title>
+<title>Research – Haochen (Jerry) Li</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -41,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-21b0066232a22e4635635122c0106272.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -60,8 +61,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="About – Haochen (Jerry) Li">
-<meta property="og:description" content="Haochen (Jerry) Li — M.S. student in Statistical Science at Duke University, working on time series, machine learning, and quantitative finance.">
+<meta property="og:title" content="Research – Haochen (Jerry) Li">
+<meta property="og:description" content="Publications and ongoing research by Haochen (Jerry) Li in deep learning, time-series forecasting, attention mechanisms, flow matching, and generative models.">
 <meta property="og:site_name" content="Haochen (Jerry) Li">
 </head>
 
@@ -118,23 +119,26 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Research</h1>
+</div>
+
+<div>
+  <div class="description">
+    Publications and ongoing research by Haochen (Jerry) Li in deep learning, time-series forecasting, attention mechanisms, flow matching, and generative models.
+  </div>
 </div>
 
 
-
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -146,9 +150,141 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>About this site</p>
+<style>
+/* ===================================================================
+   Measured 1:1 from the reference publications page:
+   year heading 18.4px/700 · paper title 16.8px/400 ·
+   authors, venue, abstract, links all 12.8px/19.84px
+   =================================================================== */
+
+body.quarto-light { background: #f8f9fa; }
+
+/* ===== shared page container — identical on index / research / projects /
+   hobbies, so every page has the same left edge and the same width.
+   1110px centred = the content width of index.qmd's 1140px container. ===== */
+#quarto-margin-sidebar { display: none !important; }
+
+#quarto-content main.content {
+  box-sizing: border-box;
+  grid-column: 1 / -1 !important;
+  width: 100%;
+  max-width: 1370px;
+  margin: 24px auto 48px !important;
+  padding: 24px !important;
+}
+
+#quarto-content main.content {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075);
+}
 
 
+#quarto-document-content { font-size: 16px; line-height: 25.6px; }
+
+.quarto-title h1.title { font-size: 24px; font-weight: 700; line-height: 30px; }
+.quarto-title .subtitle { font-size: 16px; line-height: 24.8px; color: #6c757d; }
+
+/* ---- year heading ---- */
+#quarto-document-content h2 {
+  margin: 26px 0 4px;
+  padding: 0;
+  border: 0;
+  font-size: 18.4px;
+  font-weight: 700;
+  line-height: 22.08px;
+}
+
+#quarto-document-content section.level2:first-of-type > h2 { margin-top: 14px; }
+
+/* ---- one entry ---- */
+#quarto-document-content section.level3 {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #e9ecef;
+}
+
+#quarto-document-content section.level2 > section.level3:first-of-type {
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+#quarto-document-content h3 {
+  margin: 0 0 4px;
+  font-size: 16.8px;
+  font-weight: 400;
+  line-height: 23.52px;
+  color: #000;
+}
+
+/* everything inside an entry is 12.8px */
+#quarto-document-content section.level3 p {
+  margin: 0 0 3px;
+  color: #6c757d;
+  font-size: 12.8px;
+  line-height: 19.84px;
+}
+
+/* author line stays dark */
+#quarto-document-content section.level3 p:first-of-type { color: #212529; }
+
+/* venue / status lines stay dark and italic */
+#quarto-document-content section.level3 p:has(> em) { color: #212529; }
+
+/* intro paragraph above the years */
+#quarto-document-content > p,
+#quarto-document-content > section.level1 > p { font-size: 16px; line-height: 25.6px; }
+</style>
+<p>My research interests lie in the theoretical foundations and practical applications of machine learning and deep learning.</p>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section">2026</h2>
+<section id="research-on-lightweight-detection-algorithms-for-unsafe-passenger-behavior-on-escalators" class="level3">
+<h3 class="anchored" data-anchor-id="research-on-lightweight-detection-algorithms-for-unsafe-passenger-behavior-on-escalators">Research on Lightweight Detection Algorithms for Unsafe Passenger Behavior on Escalators</h3>
+<p>Nan Zhang, Ying Hou, Qilun Li, <strong>Haochen Li</strong>, Wei Zhang, and Chaoyang Sun.</p>
+<p><em>2026 9th International Conference on Advanced Electronic Technology, Computers and Software Engineering</em>, 2026.</p>
+<p>This work studies lightweight deep-learning algorithms for detecting unsafe passenger behaviour in escalator environments. It focuses on balancing detection accuracy, computational efficiency, and deployment feasibility in resource-constrained settings.</p>
+<p><a href="https://ieeexplore.ieee.org/abstract/document/11504053/">IEEE Xplore</a></p>
+</section>
+<section id="integrating-convexity-and-deeplabv3-for-semantic-segmentation-of-power-lines" class="level3">
+<h3 class="anchored" data-anchor-id="integrating-convexity-and-deeplabv3-for-semantic-segmentation-of-power-lines">Integrating Convexity and DeepLabv3+ for Semantic Segmentation of Power Lines</h3>
+<p>Ying Hou, Jindou Tuo, <strong>Haochen Li</strong>, Zhuoxin Yan, Xuemei Huang, and Yuqi Wang.</p>
+<p><em>Research Square Preprint</em>, 2026.</p>
+<p>This paper proposes PLE-DeepLabv3+, a lightweight semantic-segmentation model for detecting thin and low-contrast power lines in complex aerial imagery. The model combines a reconfigured ConvNeXtV2 backbone, direction-selective coordinate attention, efficient multi-scale feature fusion, adaptive edge detection, and a class-aware focal loss.</p>
+<p><a href="https://doi.org/10.21203/rs.3.rs-8607246/v1">Preprint</a> | <a href="https://doi.org/10.21203/rs.3.rs-8607246/v1">DOI</a></p>
+</section>
+<section id="when-does-softmax-attention-outperform-linear-prediction-in-nonlinear-time-series" class="level3">
+<h3 class="anchored" data-anchor-id="when-does-softmax-attention-outperform-linear-prediction-in-nonlinear-time-series">When Does Softmax Attention Outperform Linear Prediction in Nonlinear Time Series?</h3>
+<p><strong>Haochen Li</strong>, Anru Zhang.</p>
+<p><em>Manuscript in preparation for submission.</em></p>
+<p>This work studies when softmax attention can outperform linear prediction in nonlinear time series. It develops a statistical framework that balances the approximation gains of nonlinear attention against the additional costs of model selection and estimation. The theoretical results are accompanied by simulation studies across different signal, noise, and sample-size regimes.</p>
+</section>
+<section id="replication-and-cross-asset-extension-of-the-intraday-volume-estimator" class="level3">
+<h3 class="anchored" data-anchor-id="replication-and-cross-asset-extension-of-the-intraday-volume-estimator">Replication and Cross-Asset Extension of the Intraday Volume Estimator</h3>
+<p><strong>Haochen Li</strong>, Anru Zhang.</p>
+<p><em>Manuscript completed.</em></p>
+<p>This work replicates and extends a Transformer-based probabilistic forecasting framework for intraday sequential data. It examines the model across multiple asset classes and forecast targets, including volume and realized volatility. The analysis considers robustness, causal deployment, and the effect of predictive improvements on downstream decision-making.</p>
+</section>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">2025</h2>
+<section id="efficient-yolov11-antiuav-algorithm-for-counter-uav-target-detection" class="level3">
+<h3 class="anchored" data-anchor-id="efficient-yolov11-antiuav-algorithm-for-counter-uav-target-detection">Efficient YOLOv11-AntiUAV Algorithm for Counter-UAV Target Detection</h3>
+<p>Adviser: Assoc. Prof.&nbsp;Ying Hou, Xi’an University of Science and Technology · 2025</p>
+<p>Developed an efficient YOLOv11-based framework for detecting small and distant UAV targets under class imbalance. Introduced class-weighted loss design and simulated low-light and motion-blur conditions through data augmentation. Evaluated the model using precision, recall, ROC curves, and confusion matrices.</p>
+</section>
+<section id="lightweight-yolov11-network-for-multi-scale-feature-fusion-in-uav-small-object-detection" class="level3">
+<h3 class="anchored" data-anchor-id="lightweight-yolov11-network-for-multi-scale-feature-fusion-in-uav-small-object-detection">Lightweight YOLOv11 Network for Multi-Scale Feature Fusion in UAV Small-Object Detection</h3>
+<p>Adviser: Assoc. Prof.&nbsp;Ying Hou, Xi’an University of Science and Technology · 2025</p>
+<p>Developed lightweight YOLOv11 variants by simplifying the feature-pyramid pathway and replacing standard convolutions with grouped convolutions. Analyzed parameter counts, FLOPs, convergence, and speed-accuracy trade-offs across candidate architectures.</p>
+</section>
+<section id="multi-scale-feature-fusion-based-yolov8-object-detection-for-uav-images" class="level3">
+<h3 class="anchored" data-anchor-id="multi-scale-feature-fusion-based-yolov8-object-detection-for-uav-images">Multi-Scale Feature Fusion-Based YOLOv8 Object Detection for UAV Images</h3>
+<p>Adviser: Assoc. Prof.&nbsp;Ying Hou, Xi’an University of Science and Technology · 2025</p>
+<p>Improved multi-scale feature extraction and bounding-box regression for dense small-object detection in aerial imagery. Contributed to data preprocessing, annotation, architectural modifications, and ablation studies evaluated using mAP and recall.</p>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

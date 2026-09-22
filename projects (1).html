@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-21b0066232a22e4635635122c0106272.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -90,7 +90,7 @@ window.Quarto = {
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Selected Projects – Haochen (Jerry) Li">
-<meta property="og:description" content="Probabilistic forecasting, machine learning, deep learning and nonlinear dynamics">
+<meta property="og:description" content="Quantitative finance, probabilistic forecasting, machine learning, and nonlinear dynamics">
 <meta property="og:image" content="https://jerrylhc0513.github.io/fig/projects/hsbc-equity-volatility-feature-importance.png">
 <meta property="og:site_name" content="Haochen (Jerry) Li">
 <meta property="og:image:alt" content="Equity-volatility feature importance">
@@ -117,7 +117,7 @@ window.Quarto = {
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="./projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -149,7 +149,7 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -166,17 +166,17 @@ window.Quarto = {
 </nav>
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Selected Projects</h1>
-<p class="subtitle lead">Probabilistic forecasting, machine learning, deep learning and nonlinear dynamics</p>
+<p class="subtitle lead">Quantitative finance, probabilistic forecasting, machine learning, and nonlinear dynamics</p>
 </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
     
   
@@ -189,131 +189,121 @@ window.Quarto = {
 
 
 <style>
-/* ===================================================================
-   Shared type scale — identical to index.qmd, measured 1:1 from the
-   reference site: base 16px / 25.6px, meta 12.8px / 19.84px,
-   h1 24px, section headings 20px, sub-headings 16px.
-   Cards: radius 8px, no border, shadow 0 2px 4px rgba(0,0,0,.075),
-   padding 24px. Page background #f8f9fa.
-   =================================================================== */
-
-body.quarto-light { background: #f8f9fa; }
-
-/* ===== shared page container — identical on index / research / projects /
-   hobbies, so every page has the same left edge and the same width.
-   1110px centred = the content width of index.qmd's 1140px container. ===== */
-
-#quarto-content main.content {
-  box-sizing: border-box;
-  grid-column: 1 / -1 !important;
-  width: 100%;
-  max-width: 1210px;
-  margin: 24px auto 48px !important;
-  padding: 24px !important;
+:root {
+  --project-navy: #17365d;
+  --project-blue: #315f8c;
+  --project-text: #27313d;
+  --project-muted: #687586;
+  --project-line: #d8e0e8;
+  --project-soft: #f5f7fa;
+  --project-white: #ffffff;
 }
 
-#quarto-content main.content {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075);
-}
-
-
-#quarto-document-content { color: #27313d; font-size: 16px; line-height: 25.6px; }
-
-.quarto-title h1.title { font-size: 24px; font-weight: 700; line-height: 30px; color: #172332; }
-.quarto-title .subtitle { font-size: 16px; line-height: 24.8px; color: #6c757d; }
-
-#quarto-document-content h2 {
-  margin: 34px 0 6px;
-  padding: 0 0 8px 12px;
-  color: #172332;
-  border-left: 4px solid #17365d;
-  border-bottom: 1px solid #d8e0e8;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-}
-
-#quarto-document-content h2:first-of-type { margin-top: 8px; }
+body { color: var(--project-text); background: #ffffff; }
 
 .project-intro {
-  margin: 0 0 28px;
-  padding: 16px 18px;
+  margin: 0 0 2.5rem;
+  padding: 1.25rem 1.4rem;
   color: #334155;
-  background: #f5f7fa;
-  border-left: 4px solid #17365d;
-  border-radius: 4px;
-  font-size: 16px;
-  line-height: 25.6px;
+  background: var(--project-soft);
+  border-left: 4px solid var(--project-navy);
+  border-radius: 3px;
+  line-height: 1.75;
+}
+
+h2 {
+  margin-top: 3rem;
+  margin-bottom: 0.3rem;
+  padding: 0 0 0.65rem 0.9rem;
+  color: #172332;
+  border-left: 4px solid var(--project-navy);
+  border-bottom: 1px solid var(--project-line);
+  font-size: clamp(1.35rem, 2.1vw, 1.75rem);
+  font-weight: 720;
+  letter-spacing: -0.018em;
 }
 
 .project-meta {
-  margin: 8px 0 12px;
-  color: #315f8c;
-  font-size: 12.8px;
+  margin: 0.5rem 0 1rem;
+  color: var(--project-blue);
+  font-size: 0.84rem;
   font-weight: 700;
   letter-spacing: 0.045em;
-  line-height: 19.84px;
   text-transform: uppercase;
 }
 
-.project-lead { margin: 12px 0 14px; color: #384454; font-size: 16px; line-height: 25.6px; }
+.project-lead {
+  max-width: 1040px;
+  margin: 0.9rem 0 1.15rem;
+  color: #384454;
+  font-size: 1rem;
+  line-height: 1.75;
+}
 
 .project-summary-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  margin: 14px 0 16px;
+  gap: 1rem;
+  margin: 1rem 0 1.15rem;
 }
 
 .summary-panel {
-  padding: 16px 18px 14px;
-  background: #fff;
-  border: 1px solid #d8e0e8;
-  border-radius: 8px;
+  padding: 1rem 1.1rem 0.9rem;
+  background: #fbfcfd;
+  border: 1px solid var(--project-line);
+  border-radius: 5px;
 }
 
 .summary-panel h3 {
-  margin: 0 0 8px;
-  color: #17365d;
-  font-size: 12.8px;
-  font-weight: 700;
+  margin: 0 0 0.55rem;
+  color: var(--project-navy);
+  font-size: 0.92rem;
+  font-weight: 750;
   letter-spacing: 0.025em;
-  line-height: 19.84px;
   text-transform: uppercase;
 }
 
-.summary-panel ul { margin: 0; padding-left: 20px; color: #465365; font-size: 12.8px; line-height: 19.84px; }
-.summary-panel li + li { margin-top: 5px; }
+.summary-panel ul {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: #465365;
+  font-size: 0.91rem;
+  line-height: 1.62;
+}
 
-.project-tools { margin: 14px 0 18px; line-height: 2; }
+.summary-panel li + li { margin-top: 0.3rem; }
+
+.project-tools { margin: 0.85rem 0 1.25rem; line-height: 2; }
 
 .project-tools code {
-  margin-right: 4px;
-  padding: 4px 8px;
+  margin-right: 0.25rem;
+  padding: 0.28rem 0.48rem;
   color: #304b68;
   background: #eef3f7;
   border: 1px solid #d7e1e9;
-  border-radius: 4px;
+  border-radius: 3px;
   font-family: inherit;
-  font-size: 12.8px;
-  font-weight: 600;
+  font-size: 0.79rem;
+  font-weight: 650;
 }
 
-.figure-note { margin: 12px 0 4px; color: #687586; font-size: 12.8px; line-height: 19.84px; }
+.figure-note { margin: 0.75rem 0 0.2rem; color: var(--project-muted); font-size: 0.82rem; }
 
-.figure-grid { display: grid; gap: 14px; margin: 10px 0 26px; }
+.figure-grid {
+  display: grid;
+  gap: 0.9rem;
+  margin: 0.65rem 0 1.6rem;
+}
+
 .figure-grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .figure-grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
 .figure-item {
   min-width: 0;
-  padding: 9px 9px 8px;
-  background: #fff;
-  border: 1px solid #d8e0e8;
-  border-radius: 8px;
+  padding: 0.55rem 0.55rem 0.5rem;
+  background: var(--project-white);
+  border: 1px solid var(--project-line);
+  border-radius: 5px;
 }
 
 .figure-item > p:first-child { margin: 0; line-height: 0; }
@@ -325,51 +315,50 @@ body.quarto-light { background: #f8f9fa; }
   height: 215px;
   margin: 0 auto;
   object-fit: contain;
-  background: #fff;
+  background: #ffffff;
 }
 
 .figure-item p:last-child {
   min-height: 2.5em;
-  margin: 8px 2px 1px;
+  margin: 0.5rem 0.15rem 0.05rem;
   color: #687586;
-  font-size: 12.8px;
-  line-height: 19.84px;
+  font-size: 0.76rem;
+  line-height: 1.4;
   text-align: center;
 }
 
 .figure-item em { font-style: normal; }
 
 .equation-panel {
-  margin: 18px 0;
-  padding: 8px 16px;
+  margin: 1.1rem 0;
+  padding: 0.45rem 1rem;
   overflow-x: auto;
   background: #f7f9fb;
-  border: 1px solid #d8e0e8;
-  border-left: 4px solid #315f8c;
-  border-radius: 6px;
+  border: 1px solid var(--project-line);
+  border-left: 4px solid var(--project-blue);
+  border-radius: 4px;
 }
 
-hr { margin: 34px 0 0; border: 0; border-top: 1px solid #e1e6ec; }
+hr { margin: 2.8rem 0 0; border: 0; border-top: 1px solid #e1e6ec; }
 
-#TOC { padding-left: 12px; border-left: 1px solid #d8e0e8; }
-#TOC a { color: #536274; font-size: 12.8px; }
-#TOC a:hover, #TOC .active { color: #17365d; }
+#TOC { padding-left: 0.8rem; border-left: 1px solid var(--project-line); }
+#TOC a { color: #536274; font-size: 0.88rem; }
+#TOC a:hover, #TOC .active { color: var(--project-navy); }
 
 @media (max-width: 900px) {
   .figure-grid.cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 680px) {
-  main#quarto-document-content { padding: 18px 16px 16px; }
   .project-summary-grid,
   .figure-grid.cols-2,
   .figure-grid.cols-3 { grid-template-columns: 1fr; }
   .figure-item img { height: auto; max-height: 260px; }
-  #quarto-document-content h2 { margin-top: 26px; font-size: 18px; }
+  h2 { margin-top: 2.3rem; font-size: 1.32rem; }
 }
 </style>
 <div class="project-intro">
-<p>These projects reflect my work across applied machine learning, mathematics, statistics, data sciene, quantitative finance and economics. My approach is to begin with careful data construction, compare complex methods against credible baselines, preserve realistic time ordering, and connect model outputs to interpretable decisions.</p>
+<p>These projects reflect my work across quantitative finance, statistical learning, and applied machine learning. My approach is to begin with careful data construction, compare complex methods against credible baselines, preserve realistic time ordering, and connect model outputs to interpretable decisions.</p>
 </div>
 <section id="project-hsbc" class="level2">
 <h2 class="anchored" data-anchor-id="project-hsbc">01 · Probabilistic Intraday Volume and Volatility Forecasting</h2>
@@ -399,6 +388,9 @@ hr { margin: 34px 0 0; border: 0; border-top: 1px solid #e1e6ec; }
 </div>
 <div class="project-tools">
 <p><code>PyTorch</code> <code>Transformers</code> <code>Probabilistic forecasting</code> <code>Market microstructure</code> <code>G10 FX</code> <code>VWAP execution</code> <code>Time series</code></p>
+</div>
+<div class="figure-note">
+<p>Click any figure to open the full-resolution version.</p>
 </div>
 <div class="figure-grid cols-3">
 <div class="figure-item">
